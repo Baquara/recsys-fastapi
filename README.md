@@ -1,5 +1,8 @@
 # Recommender System API
 
+![API](./api.png)
+
+
 The Recommender System API is a general-purpose recommendation engine that provides API endpoints for managing items, users, events, and generating recommendations. It's built using Python's FastAPI and SQLite, and incorporates collaborative filtering and content-based recommendation models to provide real-time and personalized item recommendations.
 
 ## Features
