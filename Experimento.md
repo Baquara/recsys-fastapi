@@ -2,12 +2,17 @@
 
 Este guia fornece instruções sobre como interagir com a API do Recsys.
 
+
+## Acessando a API
+
+A API pode ser acessada no endpoint [https://recsysapi-cz0t.onrender.com/](https://recsysapi-cz0t.onrender.com/). Os usuários podem interagir com a API, realizando ações como adicionar, remover e buscar itens. A API também pode ser usada para gerar recomendações.
+
 ## Limpar o Banco de Dados
 
 Use a seguinte solicitação `DELETE` para limpar o banco de dados.
 
 ```sh
-curl -X DELETE http://localhost:8000/clear_db
+curl -X DELETE https://recsysapi-cz0t.onrender.com/clear_db
 ```
 
 ## Adicionar Itens
@@ -15,7 +20,7 @@ curl -X DELETE http://localhost:8000/clear_db
 Itens podem ser adicionados ao banco de dados com uma solicitação `POST`, conforme mostrado abaixo:
 
 ```sh
-curl -X POST http://localhost:8000/item -d @items.json -H "Content-Type: application/json"
+curl -X POST https://recsysapi-cz0t.onrender.com/item -d @items.json -H "Content-Type: application/json"
 ```
 
 O arquivo `items.json` deve ter a seguinte estrutura:
@@ -42,7 +47,7 @@ Consulte o arquivo **items.json** incluído no projeto.
 Para obter itens do banco de dados, use a seguinte solicitação `GET`:
 
 ```sh
-curl -X GET http://localhost:8000/items
+curl -X GET https://recsysapi-cz0t.onrender.com/items
 ```
 
 ## Adicionar Usuários
@@ -50,7 +55,7 @@ curl -X GET http://localhost:8000/items
 Usuários podem ser adicionados ao banco de dados com uma solicitação `POST`:
 
 ```sh
-curl -X POST http://localhost:8000/user -d @users.json -H "Content-Type: application/json"
+curl -X POST https://recsysapi-cz0t.onrender.com/user -d @users.json -H "Content-Type: application/json"
 ```
 
 O arquivo `users.json` deve ter a seguinte estrutura:
@@ -76,7 +81,7 @@ Consulte o arquivo **users.json** incluído no projeto.
 Para obter usuários do banco de dados, use a seguinte solicitação `GET`:
 
 ```sh
-curl -X GET http://localhost:8000/users
+curl -X GET https://recsysapi-cz0t.onrender.com/users
 ```
 
 ## Fazer Recomendações
@@ -88,7 +93,7 @@ Você pode fazer recomendações usando o Filtro Colaborativo ou o Filtro Basead
 Para obter recomendações usando o Filtragem Colaborativa para um usuário específico, envie uma solicitação `GET` para `/user/recommendations` com os parâmetros opcionais `nrec` para o número de recomendações e `sel_item` para um item específico.
 
 ```sh
-curl -X GET "http://localhost:8000/user/recommendations?nrec=5&sel_item=Item1"
+curl -X GET "https://recsysapi-cz0t.onrender.com/user/recommendations?nrec=5&sel_item=Item1"
 ```
 
 ### Filtragem Baseada em Conteúdo
@@ -96,7 +101,7 @@ curl -X GET "http://localhost:8000/user/recommendations?nrec=5&sel_item=Item1"
 Para obter recomendações usando o Filtragem Baseada em Conteúdo para um item específico, envie uma solicitação `GET` para `/item/neighbors` com os parâmetros opcionais `itemno` para o número do item e `nitems` para o número de itens.
 
 ```sh
-curl -X GET "http://localhost:8000/item/neighbors?itemno=1&nitems=5"
+curl -X GET "https://recsysapi-cz0t.onrender.com/item/neighbors?itemno=1&nitems=5"
 ```
 
 Substitua `nrec`, `sel_item`, `itemno` e `nitems` conforme necessário.
