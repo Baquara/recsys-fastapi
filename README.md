@@ -30,7 +30,6 @@ Before making POST requests, ensure that the JSON payload matches the structure 
 Before you begin, ensure you have met the following requirements:
 
 - Python 3.8 or higher.
-- SQLite3.
 
 ## Setting up Recommender System API
 
