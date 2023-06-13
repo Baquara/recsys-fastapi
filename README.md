@@ -110,6 +110,8 @@ The API also includes a `/docs` endpoint that provides a user-friendly interface
 
 The `/docs` endpoint is accessible by simply appending `/docs` to the API's base URL (e.g., `http://localhost:8000/docs` if the API is running locally on port 8000). This endpoint uses the OpenAPI (formerly Swagger) specifications to generate a comprehensive documentation for the API.
 
+I have also included a postman collection that should make testing easier through the file recsys.postman_collection.json.
+
 ## Collaborative Filtering and Content-Based Filtering
 
 In this project, we use two types of recommendation systems - Collaborative Filtering and Content-Based Filtering. Here is how they work and how you can use the codes provided:
