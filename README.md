@@ -90,16 +90,17 @@ By default, the API will be accessible at `http://localhost:8000/`.
 
 After running the server, you can view the API documentation in your web browser at `http://localhost:8000/docs`
 
+Sure, here is the updated version of your API endpoints with the POST endpoints for items and users.
+
 ## API Endpoints
 
 Here are some of the key API endpoints:
-- `/docs` (GET): Returns the OpenAI documentation for the application's endpoints.
+- `/docs` (GET): Returns the OpenAPI documentation for the application's endpoints.
 - `/items` (GET): Retrieve all items from the database.
 - `/users` (GET): Retrieve all users from the database.
-=- `/user` (GET): Retrieve a specific user's data from the database.
-<!--- `/item/events` (GET): Retrieve all events associated with a specific item.
+- `/user` (GET): Retrieve a specific user's data from the database.
+- `/item/events` (GET): Retrieve all events associated with a specific item.
 - `/user/events` (GET): Retrieve all events associated with a specific user.
--->
 
 - `/item` (DELETE): Delete a specific item from the database.
 - `/user` (DELETE): Delete a specific user from the database.
@@ -109,6 +110,37 @@ Here are some of the key API endpoints:
 - `/user/{user_id}` (PUT): Update a specific user's data in the database.
 - `/system/` (GET): Get system information.
 
+- `/item` (POST): Add new items to the database.
+- `/user` (POST): Add a new user to the database.
+
+Example of usage for POST requests:
+For `/item`:
+```json
+{
+  "items": [
+    {
+      "itemId": "123",
+      "title": "Example title",
+      "description": "Example description",
+      "tag": ["tag1", "tag2"]
+    }
+  ]
+}
+```
+For `/user`:
+```json
+{
+  "items": [
+    {
+      "userId": "123",
+      "itemId": "123",
+      "rating": 5,
+      "timestamp": "2023-06-13 13:45:30"
+    }
+  ]
+}
+```
+Remember to replace the example content with your own data.
 
 The API also includes a `/docs` endpoint that provides a user-friendly interface for exploring and testing the API's endpoints. This is an automatically generated API documentation that describes all the endpoints, their methods, parameters, and responses.
 
