@@ -108,7 +108,7 @@ Here are some of the key API endpoints:
 
 - `/item/{item_id}` (PUT): Update a specific item in the database.
 - `/user/{user_id}` (PUT): Update a specific user's data in the database.
-- - `/system/` (GET): Get system information.
+- `/system/` (GET): Get system information.
 
 
 The API also includes a `/docs` endpoint that provides a user-friendly interface for exploring and testing the API's endpoints. This is an automatically generated API documentation that describes all the endpoints, their methods, parameters, and responses.
