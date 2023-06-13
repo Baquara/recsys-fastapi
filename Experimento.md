@@ -39,7 +39,7 @@ O arquivo `items.json` deve ter a seguinte estrutura:
 }
 ```
 
-Consulte o arquivo **items.json** incluído no projeto.
+Consulte o arquivo **items.json** incluído no projeto: https://github.com/Baquara/recsys-fastapi/blob/main/items.json
 
 
 ## Obter Itens
@@ -74,7 +74,7 @@ O arquivo `users.json` deve ter a seguinte estrutura:
 }
 ```
 
-Consulte o arquivo **users.json** incluído no projeto.
+Consulte o arquivo **users.json** incluído no projeto: https://github.com/Baquara/recsys-fastapi/blob/main/users.json
 
 ## Obter Usuários
 
