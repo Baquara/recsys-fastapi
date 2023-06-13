@@ -232,19 +232,21 @@ You can make recommendations using either Collaborative Filtering or Content-bas
 
 ### Collaborative Filtering
 
-To get recommendations using Collaborative Filtering for a specific user, send a `GET` request to `/recommend/collab/userId` replacing `userId` with the id of the user.
+To get recommendations using Collaborative Filtering for a specific user, send a `GET` request to `/user/recommendations` with optional parameters `nrec` for number of recommendations and `sel_item` for a specific item.
 
 ```sh
-curl -X GET http://localhost:8000/recommend/collab/1
+curl -X GET "http://localhost:8000/user/recommendations?nrec=5&sel_item=Item1"
 ```
 
 ### Content-Based Filtering
 
-To get recommendations using Content-based Filtering for a specific user, send a `GET` request to `/recommend/content/userId` replacing `userId` with the id of the user.
+To get recommendations using Content-based Filtering for a specific item, send a `GET` request to `/item/neighbors` with optional parameters `itemno` for item number and `nitems` for number of items.
 
 ```sh
-curl -X GET http://localhost:8000/recommend/content/1
+curl -X GET "http://localhost:8000/item/neighbors?itemno=1&nitems=5"
 ```
+
+Please replace `nrec`, `sel_item`, `itemno` and `nitems` as needed.
 
 
 ## Experiment Questions
