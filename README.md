@@ -99,8 +99,6 @@ Here are some of the key API endpoints:
 - `/items` (GET): Retrieve all items from the database.
 - `/users` (GET): Retrieve all users from the database.
 - `/user` (GET): Retrieve a specific user's data from the database.
-- `/item/events` (GET): Retrieve all events associated with a specific item.
-- `/user/events` (GET): Retrieve all events associated with a specific user.
 
 - `/item` (DELETE): Delete a specific item from the database.
 - `/user` (DELETE): Delete a specific user from the database.
