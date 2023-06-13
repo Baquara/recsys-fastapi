@@ -1,0 +1,210 @@
+{
+	"info": {
+		"_postman_id": "eadaf795-da0a-4172-9c73-d547a7f24ecb",
+		"name": "recsys",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8000/clear_db",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\"itemId\": \"1\", \"title\": \"Statue of Liberty\", \"description\": \"A colossal neoclassical sculpture on Liberty Island in New York Harbor\", \"tag\": [\"USA\", \"New York\", \"Monument\"]},\n        {\"itemId\": \"2\", \"title\": \"Eiffel Tower\", \"description\": \"A wrought-iron lattice tower on the Champ de Mars in Paris, France\", \"tag\": [\"France\", \"Paris\", \"Monument\"]},\n        {\"itemId\": \"3\", \"title\": \"Great Wall of China\", \"description\": \"A series of fortifications that were built across the historical northern borders of ancient Chinese states\", \"tag\": [\"China\", \"Historical\", \"Wall\"]},\n        {\"itemId\": \"4\", \"title\": \"Pyramids of Giza\", \"description\": \"The pyramids are the last of the Seven Wonders of the Ancient World\", \"tag\": [\"Egypt\", \"Pyramid\", \"Ancient\"]},\n        {\"itemId\": \"5\", \"title\": \"Stonehenge\", \"description\": \"A prehistoric monument in Wiltshire, England\", \"tag\": [\"UK\", \"England\", \"Prehistoric\"]},\n        {\"itemId\": \"6\", \"title\": \"Mount Rushmore\", \"description\": \"A sculpture carved into the granite face of Mount Rushmore in South Dakota, USA\", \"tag\": [\"USA\", \"South Dakota\", \"Monument\"]},\n        {\"itemId\": \"7\", \"title\": \"Machu Picchu\", \"description\": \"An Incan citadel set high in the Andes Mountains in Peru\", \"tag\": [\"Peru\", \"Inca\", \"Citadel\"]},\n        {\"itemId\": \"8\", \"title\": \"Colosseum\", \"description\": \"A large amphitheatre built in Rome under the Flavian emperors\", \"tag\": [\"Italy\", \"Rome\", \"Amphitheatre\"]},\n        {\"itemId\": \"9\", \"title\": \"Sydney Opera House\", \"description\": \"A multi-venue performing arts centre at Sydney Harbour in Sydney, Australia\", \"tag\": [\"Australia\", \"Sydney\", \"Opera House\"]},\n        {\"itemId\": \"10\", \"title\": \"Taj Mahal\", \"description\": \"An ivory-white marble mausoleum on the right bank of the Yamuna river in Agra, India\", \"tag\": [\"India\", \"Agra\", \"Mausoleum\"]},\n        {\"itemId\": \"11\", \"title\": \"Angkor Wat\", \"description\": \"A temple complex in Cambodia, the largest religious monument in the world\", \"tag\": [\"Cambodia\", \"Temple\", \"Religious\"]},\n        {\"itemId\": \"12\", \"title\": \"Niagara Falls\", \"description\": \"Three waterfalls located at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States\", \"tag\": [\"USA\", \"Canada\", \"Waterfall\"]},\n        {\"itemId\": \"13\", \"title\": \"The Louvre\", \"description\": \"The world's largest art museum and a historic monument in Paris, France\", \"tag\": [\"France\", \"Paris\", \"Museum\"]},\n        {\"itemId\": \"14\", \"title\": \"Grand Canyon\", \"description\": \"A steep-sided canyon carved by the Colorado River in Arizona\", \"tag\": []},\n        {\"itemId\": \"15\", \"title\": \"Petra\", \"description\": \"An ancient city in Jordan known for its rock-cut architecture\", \"tag\": [\"Jordan\", \"Ancient\", \"Archaeology\"]},\n        {\"itemId\": \"16\", \"title\": \"Sagrada Familia\", \"description\": \"A large unfinished Roman Catholic basilica in Barcelona, Spain\", \"tag\": [\"Spain\", \"Barcelona\", \"Basilica\"]},\n        {\"itemId\": \"17\", \"title\": \"Acropolis of Athens\", \"description\": \"An ancient citadel located on a rocky outcrop above the city of Athens, Greece\", \"tag\": [\"Greece\", \"Athens\", \"Ancient\"]},\n        {\"itemId\": \"18\", \"title\": \"Chichen Itza\", \"description\": \"A large pre-Columbian city built by the Maya people in Mexico\", \"tag\": [\"Mexico\", \"Maya\", \"Archaeological Site\"]},\n        {\"itemId\": \"19\", \"title\": \"Great Barrier Reef\", \"description\": \"The world's largest coral reef system off the coast of Australia\", \"tag\": [\"Australia\", \"Coral Reef\", \"Marine\"]},\n        {\"itemId\": \"20\", \"title\": \"Mount Everest\", \"description\": \"The highest mountain in the world, located in the Himalayas\", \"tag\": [\"Nepal\", \"Mountain\", \"Himalayas\"]}\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/clear_db",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"clear_db"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/items",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/items",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"items"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\"itemId\": \"1\", \"title\": \"Statue of Liberty\", \"description\": \"A colossal neoclassical sculpture on Liberty Island in New York Harbor\", \"tag\": [\"USA\", \"New York\", \"Monument\"]},\n        {\"itemId\": \"2\", \"title\": \"Eiffel Tower\", \"description\": \"A wrought-iron lattice tower on the Champ de Mars in Paris, France\", \"tag\": [\"France\", \"Paris\", \"Monument\"]},\n        {\"itemId\": \"3\", \"title\": \"Great Wall of China\", \"description\": \"A series of fortifications that were built across the historical northern borders of ancient Chinese states\", \"tag\": [\"China\", \"Historical\", \"Wall\"]},\n        {\"itemId\": \"4\", \"title\": \"Pyramids of Giza\", \"description\": \"The pyramids are the last of the Seven Wonders of the Ancient World\", \"tag\": [\"Egypt\", \"Pyramid\", \"Ancient\"]},\n        {\"itemId\": \"5\", \"title\": \"Stonehenge\", \"description\": \"A prehistoric monument in Wiltshire, England\", \"tag\": [\"UK\", \"England\", \"Prehistoric\"]},\n        {\"itemId\": \"6\", \"title\": \"Mount Rushmore\", \"description\": \"A sculpture carved into the granite face of Mount Rushmore in South Dakota, USA\", \"tag\": [\"USA\", \"South Dakota\", \"Monument\"]},\n        {\"itemId\": \"7\", \"title\": \"Machu Picchu\", \"description\": \"An Incan citadel set high in the Andes Mountains in Peru\", \"tag\": [\"Peru\", \"Inca\", \"Citadel\"]},\n        {\"itemId\": \"8\", \"title\": \"Colosseum\", \"description\": \"A large amphitheatre built in Rome under the Flavian emperors\", \"tag\": [\"Italy\", \"Rome\", \"Amphitheatre\"]},\n        {\"itemId\": \"9\", \"title\": \"Sydney Opera House\", \"description\": \"A multi-venue performing arts centre at Sydney Harbour in Sydney, Australia\", \"tag\": [\"Australia\", \"Sydney\", \"Opera House\"]},\n        {\"itemId\": \"10\", \"title\": \"Taj Mahal\", \"description\": \"An ivory-white marble mausoleum on the right bank of the Yamuna river in Agra, India\", \"tag\": [\"India\", \"Agra\", \"Mausoleum\"]},\n        {\"itemId\": \"11\", \"title\": \"Angkor Wat\", \"description\": \"A temple complex in Cambodia, the largest religious monument in the world\", \"tag\": [\"Cambodia\", \"Temple\", \"Religious\"]},\n        {\"itemId\": \"12\", \"title\": \"Niagara Falls\", \"description\": \"Three waterfalls located at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States\", \"tag\": [\"USA\", \"Canada\", \"Waterfall\"]},\n        {\"itemId\": \"13\", \"title\": \"The Louvre\", \"description\": \"The world's largest art museum and a historic monument in Paris, France\", \"tag\": [\"France\", \"Paris\", \"Museum\"]},\n        {\"itemId\": \"14\", \"title\": \"Grand Canyon\", \"description\": \"A steep-sided canyon carved by the Colorado River in Arizona\", \"tag\": []},\n        {\"itemId\": \"15\", \"title\": \"Petra\", \"description\": \"An ancient city in Jordan known for its rock-cut architecture\", \"tag\": [\"Jordan\", \"Ancient\", \"Archaeology\"]},\n        {\"itemId\": \"16\", \"title\": \"Sagrada Familia\", \"description\": \"A large unfinished Roman Catholic basilica in Barcelona, Spain\", \"tag\": [\"Spain\", \"Barcelona\", \"Basilica\"]},\n        {\"itemId\": \"17\", \"title\": \"Acropolis of Athens\", \"description\": \"An ancient citadel located on a rocky outcrop above the city of Athens, Greece\", \"tag\": [\"Greece\", \"Athens\", \"Ancient\"]},\n        {\"itemId\": \"18\", \"title\": \"Chichen Itza\", \"description\": \"A large pre-Columbian city built by the Maya people in Mexico\", \"tag\": [\"Mexico\", \"Maya\", \"Archaeological Site\"]},\n        {\"itemId\": \"19\", \"title\": \"Great Barrier Reef\", \"description\": \"The world's largest coral reef system off the coast of Australia\", \"tag\": [\"Australia\", \"Coral Reef\", \"Marine\"]},\n        {\"itemId\": \"20\", \"title\": \"Mount Everest\", \"description\": \"The highest mountain in the world, located in the Himalayas\", \"tag\": [\"Nepal\", \"Mountain\", \"Himalayas\"]}\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/item",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"item"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"items\": [\n        {\"userId\": 1, \"itemId\": 1, \"rating\": 3.5, \"timestamp\": 1112486027},\n        {\"userId\": 1, \"itemId\": 2, \"rating\": 3.5, \"timestamp\": 1112484676},\n        {\"userId\": 2, \"itemId\": 3, \"rating\": 3.5, \"timestamp\": 1112484819},\n        {\"userId\": 3, \"itemId\": 4, \"rating\": 4.2, \"timestamp\": 1112485051},\n        {\"userId\": 4, \"itemId\": 5, \"rating\": 4.0, \"timestamp\": 1112485178},\n        {\"userId\": 4, \"itemId\": 6, \"rating\": 3.8, \"timestamp\": 1112485243},\n        {\"userId\": 5, \"itemId\": 7, \"rating\": 4.5, \"timestamp\": 1112485362},\n        {\"userId\": 5, \"itemId\": 8, \"rating\": 4.7, \"timestamp\": 1112485458},\n        {\"userId\": 6, \"itemId\": 9, \"rating\": 3.2, \"timestamp\": 1112485597},\n        {\"userId\": 7, \"itemId\": 10, \"rating\": 3.9, \"timestamp\": 1112485736}\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8000/user",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/user/recommendations?nrec=5&sel_item=Eiffel Tower",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/user/recommendations?nrec=5&sel_item=Eiffel Tower",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"user",
+						"recommendations"
+					],
+					"query": [
+						{
+							"key": "nrec",
+							"value": "5"
+						},
+						{
+							"key": "sel_item",
+							"value": "Eiffel Tower"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/item/neighbors?itemno=1&nitems=5",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/item/neighbors?itemno=1&nitems=3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"item",
+						"neighbors"
+					],
+					"query": [
+						{
+							"key": "itemno",
+							"value": "1"
+						},
+						{
+							"key": "nitems",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/users",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8000/system",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8000/system",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"system"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
