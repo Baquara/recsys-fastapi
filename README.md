@@ -12,7 +12,7 @@ The Recommender System API is a general-purpose recommendation engine that provi
 
 ## Accessing the API
 
-The API is accessible at the endpoint [http://serpentinecoder.pythonanywhere.com/](https://recsysapi-cz0t.onrender.com/)](https://recsysapi-cz0t.onrender.com/). Users can interact with the API, performing actions such as adding, removing, and fetching items. The API can also be used to generate recommendations.
+The API is accessible at the endpoint [http://serpentinecoder.pythonanywhere.com/](https://recsysapi-cz0t.onrender.com/). Users can interact with the API, performing actions such as adding, removing, and fetching items. The API can also be used to generate recommendations.
 
 ## Example Inputs
 
