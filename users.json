@@ -1,0 +1,14 @@
+{
+    "items": [
+        {"userId": 1, "itemId": 1, "rating": 3.5, "timestamp": 1112486027},
+        {"userId": 1, "itemId": 2, "rating": 3.5, "timestamp": 1112484676},
+        {"userId": 2, "itemId": 3, "rating": 3.5, "timestamp": 1112484819},
+        {"userId": 3, "itemId": 4, "rating": 4.2, "timestamp": 1112485051},
+        {"userId": 4, "itemId": 5, "rating": 4.0, "timestamp": 1112485178},
+        {"userId": 4, "itemId": 6, "rating": 3.8, "timestamp": 1112485243},
+        {"userId": 5, "itemId": 7, "rating": 4.5, "timestamp": 1112485362},
+        {"userId": 5, "itemId": 8, "rating": 4.7, "timestamp": 1112485458},
+        {"userId": 6, "itemId": 9, "rating": 3.2, "timestamp": 1112485597},
+        {"userId": 7, "itemId": 10, "rating": 3.9, "timestamp": 1112485736}
+    ]
+}

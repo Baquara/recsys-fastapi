@@ -1,0 +1,24 @@
+{
+    "items": [
+        {"itemId": "1", "title": "Statue of Liberty", "description": "A colossal neoclassical sculpture on Liberty Island in New York Harbor", "tag": ["USA", "New York", "Monument"]},
+        {"itemId": "2", "title": "Eiffel Tower", "description": "A wrought-iron lattice tower on the Champ de Mars in Paris, France", "tag": ["France", "Paris", "Monument"]},
+        {"itemId": "3", "title": "Great Wall of China", "description": "A series of fortifications that were built across the historical northern borders of ancient Chinese states", "tag": ["China", "Historical", "Wall"]},
+        {"itemId": "4", "title": "Pyramids of Giza", "description": "The pyramids are the last of the Seven Wonders of the Ancient World", "tag": ["Egypt", "Pyramid", "Ancient"]},
+        {"itemId": "5", "title": "Stonehenge", "description": "A prehistoric monument in Wiltshire, England", "tag": ["UK", "England", "Prehistoric"]},
+        {"itemId": "6", "title": "Mount Rushmore", "description": "A sculpture carved into the granite face of Mount Rushmore in South Dakota, USA", "tag": ["USA", "South Dakota", "Monument"]},
+        {"itemId": "7", "title": "Machu Picchu", "description": "An Incan citadel set high in the Andes Mountains in Peru", "tag": ["Peru", "Inca", "Citadel"]},
+        {"itemId": "8", "title": "Colosseum", "description": "A large amphitheatre built in Rome under the Flavian emperors", "tag": ["Italy", "Rome", "Amphitheatre"]},
+        {"itemId": "9", "title": "Sydney Opera House", "description": "A multi-venue performing arts centre at Sydney Harbour in Sydney, Australia", "tag": ["Australia", "Sydney", "Opera House"]},
+        {"itemId": "10", "title": "Taj Mahal", "description": "An ivory-white marble mausoleum on the right bank of the Yamuna river in Agra, India", "tag": ["India", "Agra", "Mausoleum"]},
+        {"itemId": "11", "title": "Angkor Wat", "description": "A temple complex in Cambodia, the largest religious monument in the world", "tag": ["Cambodia", "Temple", "Religious"]},
+        {"itemId": "12", "title": "Niagara Falls", "description": "Three waterfalls located at the southern end of Niagara Gorge, spanning the border between the province of Ontario in Canada and the state of New York in the United States", "tag": ["USA", "Canada", "Waterfall"]},
+        {"itemId": "13", "title": "The Louvre", "description": "The world's largest art museum and a historic monument in Paris, France", "tag": ["France", "Paris", "Museum"]},
+        {"itemId": "14", "title": "Grand Canyon", "description": "A steep-sided canyon carved by the Colorado River in Arizona", "tag": []},
+        {"itemId": "15", "title": "Petra", "description": "An ancient city in Jordan known for its rock-cut architecture", "tag": ["Jordan", "Ancient", "Archaeology"]},
+        {"itemId": "16", "title": "Sagrada Familia", "description": "A large unfinished Roman Catholic basilica in Barcelona, Spain", "tag": ["Spain", "Barcelona", "Basilica"]},
+        {"itemId": "17", "title": "Acropolis of Athens", "description": "An ancient citadel located on a rocky outcrop above the city of Athens, Greece", "tag": ["Greece", "Athens", "Ancient"]},
+        {"itemId": "18", "title": "Chichen Itza", "description": "A large pre-Columbian city built by the Maya people in Mexico", "tag": ["Mexico", "Maya", "Archaeological Site"]},
+        {"itemId": "19", "title": "Great Barrier Reef", "description": "The world's largest coral reef system off the coast of Australia", "tag": ["Australia", "Coral Reef", "Marine"]},
+        {"itemId": "20", "title": "Mount Everest", "description": "The highest mountain in the world, located in the Himalayas", "tag": ["Nepal", "Mountain", "Himalayas"]}
+    ]
+}
