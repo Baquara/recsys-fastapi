@@ -144,8 +144,6 @@ Please ensure that you have the necessary libraries installed and the required d
 
 4. The current implementations use basic versions of Collaborative Filtering and Content-Based Filtering. There are more advanced techniques and improvements that can be incorporated to improve the recommendations.
 
-5. Always ensure you have the necessary permissions to access and manipulate the data and adhere to privacy regulations and best practices while handling user data.
-
 # Recsys API Guide
 
 This guide provides instructions on how to interact with the Recsys API.
