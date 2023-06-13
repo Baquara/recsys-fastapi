@@ -94,12 +94,13 @@ After running the server, you can view the API documentation in your web browser
 ## API Endpoints
 
 Here are some of the key API endpoints:
-
+- `/docs` (GET): Returns the OpenAI documentation for the application's endpoints.
 - `/items` (GET): Retrieve all items from the database.
 - `/users` (GET): Retrieve all users from the database.
 =- `/user` (GET): Retrieve a specific user's data from the database.
-- `/item/events` (GET): Retrieve all events associated with a specific item.
+<!--- `/item/events` (GET): Retrieve all events associated with a specific item.
 - `/user/events` (GET): Retrieve all events associated with a specific user.
+-->
 
 - `/item` (DELETE): Delete a specific item from the database.
 - `/user` (DELETE): Delete a specific user from the database.
