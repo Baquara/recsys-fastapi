@@ -1,14 +1,3004 @@
 {
     "items": [
-        {"userId": 1, "itemId": 1, "rating": 3.5, "timestamp": 1112486027},
-        {"userId": 1, "itemId": 2, "rating": 3.5, "timestamp": 1112484676},
-        {"userId": 2, "itemId": 3, "rating": 3.5, "timestamp": 1112484819},
-        {"userId": 3, "itemId": 4, "rating": 4.2, "timestamp": 1112485051},
-        {"userId": 4, "itemId": 5, "rating": 4.0, "timestamp": 1112485178},
-        {"userId": 4, "itemId": 6, "rating": 3.8, "timestamp": 1112485243},
-        {"userId": 5, "itemId": 7, "rating": 4.5, "timestamp": 1112485362},
-        {"userId": 5, "itemId": 8, "rating": 4.7, "timestamp": 1112485458},
-        {"userId": 6, "itemId": 9, "rating": 3.2, "timestamp": 1112485597},
-        {"userId": 7, "itemId": 10, "rating": 3.9, "timestamp": 1112485736}
+        {
+            "userId": 10,
+            "itemId": 14,
+            "rating": 1.3,
+            "timestamp": 1112485768
+        },
+        {
+            "userId": 42,
+            "itemId": 2,
+            "rating": 2.6,
+            "timestamp": 1112484473
+        },
+        {
+            "userId": 2,
+            "itemId": 2,
+            "rating": 3.6,
+            "timestamp": 1112484552
+        },
+        {
+            "userId": 33,
+            "itemId": 10,
+            "rating": 1.5,
+            "timestamp": 1112486608
+        },
+        {
+            "userId": 21,
+            "itemId": 25,
+            "rating": 1.7,
+            "timestamp": 1112486788
+        },
+        {
+            "userId": 14,
+            "itemId": 6,
+            "rating": 1.0,
+            "timestamp": 1112486331
+        },
+        {
+            "userId": 11,
+            "itemId": 16,
+            "rating": 4.1,
+            "timestamp": 1112484428
+        },
+        {
+            "userId": 17,
+            "itemId": 11,
+            "rating": 4.6,
+            "timestamp": 1112485214
+        },
+        {
+            "userId": 32,
+            "itemId": 10,
+            "rating": 3.6,
+            "timestamp": 1112486828
+        },
+        {
+            "userId": 20,
+            "itemId": 48,
+            "rating": 4.2,
+            "timestamp": 1112485628
+        },
+        {
+            "userId": 35,
+            "itemId": 29,
+            "rating": 4.0,
+            "timestamp": 1112486292
+        },
+        {
+            "userId": 13,
+            "itemId": 12,
+            "rating": 3.2,
+            "timestamp": 1112484702
+        },
+        {
+            "userId": 36,
+            "itemId": 8,
+            "rating": 3.4,
+            "timestamp": 1112486493
+        },
+        {
+            "userId": 8,
+            "itemId": 7,
+            "rating": 2.3,
+            "timestamp": 1112485600
+        },
+        {
+            "userId": 45,
+            "itemId": 30,
+            "rating": 2.3,
+            "timestamp": 1112486088
+        },
+        {
+            "userId": 35,
+            "itemId": 6,
+            "rating": 3.8,
+            "timestamp": 1112485573
+        },
+        {
+            "userId": 40,
+            "itemId": 33,
+            "rating": 3.0,
+            "timestamp": 1112485527
+        },
+        {
+            "userId": 35,
+            "itemId": 27,
+            "rating": 1.4,
+            "timestamp": 1112484284
+        },
+        {
+            "userId": 27,
+            "itemId": 11,
+            "rating": 2.4,
+            "timestamp": 1112485465
+        },
+        {
+            "userId": 40,
+            "itemId": 29,
+            "rating": 2.8,
+            "timestamp": 1112484247
+        },
+        {
+            "userId": 31,
+            "itemId": 15,
+            "rating": 4.9,
+            "timestamp": 1112486502
+        },
+        {
+            "userId": 13,
+            "itemId": 49,
+            "rating": 2.7,
+            "timestamp": 1112486563
+        },
+        {
+            "userId": 10,
+            "itemId": 44,
+            "rating": 2.3,
+            "timestamp": 1112486104
+        },
+        {
+            "userId": 26,
+            "itemId": 32,
+            "rating": 1.4,
+            "timestamp": 1112486077
+        },
+        {
+            "userId": 30,
+            "itemId": 26,
+            "rating": 3.1,
+            "timestamp": 1112485000
+        },
+        {
+            "userId": 18,
+            "itemId": 36,
+            "rating": 4.5,
+            "timestamp": 1112484884
+        },
+        {
+            "userId": 43,
+            "itemId": 1,
+            "rating": 4.0,
+            "timestamp": 1112485795
+        },
+        {
+            "userId": 48,
+            "itemId": 42,
+            "rating": 1.6,
+            "timestamp": 1112485970
+        },
+        {
+            "userId": 34,
+            "itemId": 22,
+            "rating": 4.8,
+            "timestamp": 1112485722
+        },
+        {
+            "userId": 27,
+            "itemId": 42,
+            "rating": 1.6,
+            "timestamp": 1112486305
+        },
+        {
+            "userId": 3,
+            "itemId": 16,
+            "rating": 3.3,
+            "timestamp": 1112485086
+        },
+        {
+            "userId": 27,
+            "itemId": 13,
+            "rating": 1.2,
+            "timestamp": 1112485333
+        },
+        {
+            "userId": 14,
+            "itemId": 31,
+            "rating": 1.3,
+            "timestamp": 1112486724
+        },
+        {
+            "userId": 11,
+            "itemId": 5,
+            "rating": 3.0,
+            "timestamp": 1112484756
+        },
+        {
+            "userId": 48,
+            "itemId": 32,
+            "rating": 1.8,
+            "timestamp": 1112486601
+        },
+        {
+            "userId": 3,
+            "itemId": 9,
+            "rating": 1.4,
+            "timestamp": 1112486437
+        },
+        {
+            "userId": 36,
+            "itemId": 3,
+            "rating": 4.5,
+            "timestamp": 1112484088
+        },
+        {
+            "userId": 19,
+            "itemId": 5,
+            "rating": 3.0,
+            "timestamp": 1112485792
+        },
+        {
+            "userId": 47,
+            "itemId": 49,
+            "rating": 3.8,
+            "timestamp": 1112486996
+        },
+        {
+            "userId": 11,
+            "itemId": 3,
+            "rating": 4.3,
+            "timestamp": 1112484785
+        },
+        {
+            "userId": 5,
+            "itemId": 46,
+            "rating": 2.0,
+            "timestamp": 1112486432
+        },
+        {
+            "userId": 44,
+            "itemId": 31,
+            "rating": 5.0,
+            "timestamp": 1112484108
+        },
+        {
+            "userId": 6,
+            "itemId": 40,
+            "rating": 3.8,
+            "timestamp": 1112485090
+        },
+        {
+            "userId": 12,
+            "itemId": 3,
+            "rating": 2.0,
+            "timestamp": 1112484901
+        },
+        {
+            "userId": 20,
+            "itemId": 13,
+            "rating": 2.0,
+            "timestamp": 1112486948
+        },
+        {
+            "userId": 40,
+            "itemId": 38,
+            "rating": 3.3,
+            "timestamp": 1112484246
+        },
+        {
+            "userId": 11,
+            "itemId": 18,
+            "rating": 3.8,
+            "timestamp": 1112484348
+        },
+        {
+            "userId": 9,
+            "itemId": 37,
+            "rating": 4.2,
+            "timestamp": 1112486880
+        },
+        {
+            "userId": 11,
+            "itemId": 29,
+            "rating": 4.2,
+            "timestamp": 1112486807
+        },
+        {
+            "userId": 32,
+            "itemId": 12,
+            "rating": 4.2,
+            "timestamp": 1112485248
+        },
+        {
+            "userId": 20,
+            "itemId": 44,
+            "rating": 4.9,
+            "timestamp": 1112484998
+        },
+        {
+            "userId": 4,
+            "itemId": 21,
+            "rating": 3.3,
+            "timestamp": 1112484784
+        },
+        {
+            "userId": 45,
+            "itemId": 32,
+            "rating": 2.2,
+            "timestamp": 1112486207
+        },
+        {
+            "userId": 14,
+            "itemId": 28,
+            "rating": 1.6,
+            "timestamp": 1112484834
+        },
+        {
+            "userId": 49,
+            "itemId": 19,
+            "rating": 2.7,
+            "timestamp": 1112485062
+        },
+        {
+            "userId": 38,
+            "itemId": 39,
+            "rating": 3.1,
+            "timestamp": 1112484314
+        },
+        {
+            "userId": 9,
+            "itemId": 41,
+            "rating": 4.9,
+            "timestamp": 1112484225
+        },
+        {
+            "userId": 18,
+            "itemId": 38,
+            "rating": 4.8,
+            "timestamp": 1112485550
+        },
+        {
+            "userId": 26,
+            "itemId": 19,
+            "rating": 1.2,
+            "timestamp": 1112485924
+        },
+        {
+            "userId": 29,
+            "itemId": 18,
+            "rating": 4.8,
+            "timestamp": 1112486617
+        },
+        {
+            "userId": 40,
+            "itemId": 30,
+            "rating": 1.2,
+            "timestamp": 1112485723
+        },
+        {
+            "userId": 37,
+            "itemId": 24,
+            "rating": 4.0,
+            "timestamp": 1112486582
+        },
+        {
+            "userId": 34,
+            "itemId": 18,
+            "rating": 2.0,
+            "timestamp": 1112485244
+        },
+        {
+            "userId": 40,
+            "itemId": 21,
+            "rating": 4.5,
+            "timestamp": 1112485878
+        },
+        {
+            "userId": 47,
+            "itemId": 3,
+            "rating": 2.0,
+            "timestamp": 1112484351
+        },
+        {
+            "userId": 34,
+            "itemId": 4,
+            "rating": 3.2,
+            "timestamp": 1112485028
+        },
+        {
+            "userId": 8,
+            "itemId": 1,
+            "rating": 3.2,
+            "timestamp": 1112485431
+        },
+        {
+            "userId": 16,
+            "itemId": 36,
+            "rating": 4.2,
+            "timestamp": 1112486540
+        },
+        {
+            "userId": 10,
+            "itemId": 4,
+            "rating": 4.0,
+            "timestamp": 1112484731
+        },
+        {
+            "userId": 10,
+            "itemId": 47,
+            "rating": 2.0,
+            "timestamp": 1112485907
+        },
+        {
+            "userId": 47,
+            "itemId": 19,
+            "rating": 3.5,
+            "timestamp": 1112484113
+        },
+        {
+            "userId": 43,
+            "itemId": 47,
+            "rating": 2.4,
+            "timestamp": 1112486547
+        },
+        {
+            "userId": 34,
+            "itemId": 5,
+            "rating": 4.1,
+            "timestamp": 1112486221
+        },
+        {
+            "userId": 9,
+            "itemId": 4,
+            "rating": 3.1,
+            "timestamp": 1112486106
+        },
+        {
+            "userId": 11,
+            "itemId": 43,
+            "rating": 2.6,
+            "timestamp": 1112486886
+        },
+        {
+            "userId": 47,
+            "itemId": 26,
+            "rating": 1.0,
+            "timestamp": 1112484253
+        },
+        {
+            "userId": 50,
+            "itemId": 25,
+            "rating": 1.4,
+            "timestamp": 1112484034
+        },
+        {
+            "userId": 44,
+            "itemId": 11,
+            "rating": 1.2,
+            "timestamp": 1112484090
+        },
+        {
+            "userId": 21,
+            "itemId": 14,
+            "rating": 5.0,
+            "timestamp": 1112484113
+        },
+        {
+            "userId": 17,
+            "itemId": 41,
+            "rating": 1.3,
+            "timestamp": 1112486063
+        },
+        {
+            "userId": 17,
+            "itemId": 9,
+            "rating": 4.0,
+            "timestamp": 1112484817
+        },
+        {
+            "userId": 10,
+            "itemId": 22,
+            "rating": 2.6,
+            "timestamp": 1112486925
+        },
+        {
+            "userId": 39,
+            "itemId": 19,
+            "rating": 1.4,
+            "timestamp": 1112485346
+        },
+        {
+            "userId": 15,
+            "itemId": 30,
+            "rating": 1.8,
+            "timestamp": 1112486471
+        },
+        {
+            "userId": 5,
+            "itemId": 49,
+            "rating": 3.5,
+            "timestamp": 1112485497
+        },
+        {
+            "userId": 21,
+            "itemId": 2,
+            "rating": 3.6,
+            "timestamp": 1112484227
+        },
+        {
+            "userId": 34,
+            "itemId": 45,
+            "rating": 1.2,
+            "timestamp": 1112484517
+        },
+        {
+            "userId": 43,
+            "itemId": 10,
+            "rating": 2.6,
+            "timestamp": 1112486515
+        },
+        {
+            "userId": 35,
+            "itemId": 48,
+            "rating": 3.8,
+            "timestamp": 1112486988
+        },
+        {
+            "userId": 41,
+            "itemId": 48,
+            "rating": 3.6,
+            "timestamp": 1112486456
+        },
+        {
+            "userId": 21,
+            "itemId": 33,
+            "rating": 3.9,
+            "timestamp": 1112485956
+        },
+        {
+            "userId": 50,
+            "itemId": 42,
+            "rating": 4.4,
+            "timestamp": 1112486498
+        },
+        {
+            "userId": 44,
+            "itemId": 30,
+            "rating": 2.9,
+            "timestamp": 1112484352
+        },
+        {
+            "userId": 42,
+            "itemId": 20,
+            "rating": 1.0,
+            "timestamp": 1112484824
+        },
+        {
+            "userId": 6,
+            "itemId": 29,
+            "rating": 3.9,
+            "timestamp": 1112484735
+        },
+        {
+            "userId": 21,
+            "itemId": 48,
+            "rating": 1.7,
+            "timestamp": 1112486421
+        },
+        {
+            "userId": 20,
+            "itemId": 30,
+            "rating": 1.9,
+            "timestamp": 1112486350
+        },
+        {
+            "userId": 45,
+            "itemId": 4,
+            "rating": 1.3,
+            "timestamp": 1112486474
+        },
+        {
+            "userId": 38,
+            "itemId": 40,
+            "rating": 1.3,
+            "timestamp": 1112485490
+        },
+        {
+            "userId": 10,
+            "itemId": 48,
+            "rating": 4.4,
+            "timestamp": 1112484853
+        },
+        {
+            "userId": 5,
+            "itemId": 17,
+            "rating": 1.1,
+            "timestamp": 1112486001
+        },
+        {
+            "userId": 18,
+            "itemId": 37,
+            "rating": 3.9,
+            "timestamp": 1112484521
+        },
+        {
+            "userId": 8,
+            "itemId": 20,
+            "rating": 4.9,
+            "timestamp": 1112486828
+        },
+        {
+            "userId": 34,
+            "itemId": 31,
+            "rating": 3.8,
+            "timestamp": 1112485791
+        },
+        {
+            "userId": 8,
+            "itemId": 29,
+            "rating": 2.5,
+            "timestamp": 1112484093
+        },
+        {
+            "userId": 45,
+            "itemId": 8,
+            "rating": 1.8,
+            "timestamp": 1112486950
+        },
+        {
+            "userId": 50,
+            "itemId": 49,
+            "rating": 2.6,
+            "timestamp": 1112485276
+        },
+        {
+            "userId": 8,
+            "itemId": 49,
+            "rating": 1.4,
+            "timestamp": 1112485847
+        },
+        {
+            "userId": 2,
+            "itemId": 15,
+            "rating": 4.3,
+            "timestamp": 1112486777
+        },
+        {
+            "userId": 45,
+            "itemId": 47,
+            "rating": 4.7,
+            "timestamp": 1112486790
+        },
+        {
+            "userId": 22,
+            "itemId": 13,
+            "rating": 3.9,
+            "timestamp": 1112485685
+        },
+        {
+            "userId": 1,
+            "itemId": 22,
+            "rating": 3.4,
+            "timestamp": 1112484324
+        },
+        {
+            "userId": 38,
+            "itemId": 2,
+            "rating": 4.8,
+            "timestamp": 1112485560
+        },
+        {
+            "userId": 26,
+            "itemId": 24,
+            "rating": 2.8,
+            "timestamp": 1112484694
+        },
+        {
+            "userId": 48,
+            "itemId": 19,
+            "rating": 1.0,
+            "timestamp": 1112486007
+        },
+        {
+            "userId": 15,
+            "itemId": 41,
+            "rating": 4.4,
+            "timestamp": 1112485945
+        },
+        {
+            "userId": 31,
+            "itemId": 29,
+            "rating": 3.3,
+            "timestamp": 1112485702
+        },
+        {
+            "userId": 10,
+            "itemId": 7,
+            "rating": 1.6,
+            "timestamp": 1112486553
+        },
+        {
+            "userId": 46,
+            "itemId": 41,
+            "rating": 3.2,
+            "timestamp": 1112484020
+        },
+        {
+            "userId": 35,
+            "itemId": 36,
+            "rating": 5.0,
+            "timestamp": 1112484407
+        },
+        {
+            "userId": 26,
+            "itemId": 4,
+            "rating": 1.1,
+            "timestamp": 1112484094
+        },
+        {
+            "userId": 5,
+            "itemId": 40,
+            "rating": 3.9,
+            "timestamp": 1112486615
+        },
+        {
+            "userId": 11,
+            "itemId": 13,
+            "rating": 2.0,
+            "timestamp": 1112484827
+        },
+        {
+            "userId": 21,
+            "itemId": 15,
+            "rating": 4.4,
+            "timestamp": 1112485134
+        },
+        {
+            "userId": 15,
+            "itemId": 37,
+            "rating": 1.3,
+            "timestamp": 1112485974
+        },
+        {
+            "userId": 4,
+            "itemId": 17,
+            "rating": 1.3,
+            "timestamp": 1112484064
+        },
+        {
+            "userId": 5,
+            "itemId": 28,
+            "rating": 2.4,
+            "timestamp": 1112486462
+        },
+        {
+            "userId": 40,
+            "itemId": 37,
+            "rating": 1.8,
+            "timestamp": 1112486656
+        },
+        {
+            "userId": 15,
+            "itemId": 13,
+            "rating": 3.0,
+            "timestamp": 1112485833
+        },
+        {
+            "userId": 20,
+            "itemId": 4,
+            "rating": 4.1,
+            "timestamp": 1112486675
+        },
+        {
+            "userId": 17,
+            "itemId": 45,
+            "rating": 3.8,
+            "timestamp": 1112486761
+        },
+        {
+            "userId": 38,
+            "itemId": 42,
+            "rating": 1.2,
+            "timestamp": 1112486604
+        },
+        {
+            "userId": 34,
+            "itemId": 35,
+            "rating": 3.4,
+            "timestamp": 1112484745
+        },
+        {
+            "userId": 18,
+            "itemId": 49,
+            "rating": 2.0,
+            "timestamp": 1112484258
+        },
+        {
+            "userId": 34,
+            "itemId": 27,
+            "rating": 4.2,
+            "timestamp": 1112486725
+        },
+        {
+            "userId": 41,
+            "itemId": 6,
+            "rating": 2.5,
+            "timestamp": 1112484016
+        },
+        {
+            "userId": 38,
+            "itemId": 15,
+            "rating": 4.6,
+            "timestamp": 1112486266
+        },
+        {
+            "userId": 13,
+            "itemId": 18,
+            "rating": 3.7,
+            "timestamp": 1112484090
+        },
+        {
+            "userId": 26,
+            "itemId": 14,
+            "rating": 3.8,
+            "timestamp": 1112485002
+        },
+        {
+            "userId": 27,
+            "itemId": 14,
+            "rating": 4.7,
+            "timestamp": 1112485595
+        },
+        {
+            "userId": 50,
+            "itemId": 17,
+            "rating": 3.9,
+            "timestamp": 1112486386
+        },
+        {
+            "userId": 18,
+            "itemId": 15,
+            "rating": 2.8,
+            "timestamp": 1112484980
+        },
+        {
+            "userId": 40,
+            "itemId": 34,
+            "rating": 1.2,
+            "timestamp": 1112485689
+        },
+        {
+            "userId": 41,
+            "itemId": 28,
+            "rating": 2.0,
+            "timestamp": 1112484737
+        },
+        {
+            "userId": 33,
+            "itemId": 12,
+            "rating": 2.0,
+            "timestamp": 1112484736
+        },
+        {
+            "userId": 26,
+            "itemId": 50,
+            "rating": 4.4,
+            "timestamp": 1112485305
+        },
+        {
+            "userId": 21,
+            "itemId": 50,
+            "rating": 1.4,
+            "timestamp": 1112485712
+        },
+        {
+            "userId": 47,
+            "itemId": 43,
+            "rating": 1.2,
+            "timestamp": 1112486673
+        },
+        {
+            "userId": 39,
+            "itemId": 5,
+            "rating": 3.5,
+            "timestamp": 1112485745
+        },
+        {
+            "userId": 49,
+            "itemId": 13,
+            "rating": 3.9,
+            "timestamp": 1112484075
+        },
+        {
+            "userId": 16,
+            "itemId": 16,
+            "rating": 2.7,
+            "timestamp": 1112486499
+        },
+        {
+            "userId": 46,
+            "itemId": 3,
+            "rating": 4.9,
+            "timestamp": 1112486935
+        },
+        {
+            "userId": 21,
+            "itemId": 5,
+            "rating": 1.4,
+            "timestamp": 1112485333
+        },
+        {
+            "userId": 33,
+            "itemId": 16,
+            "rating": 3.2,
+            "timestamp": 1112485661
+        },
+        {
+            "userId": 26,
+            "itemId": 28,
+            "rating": 1.8,
+            "timestamp": 1112484985
+        },
+        {
+            "userId": 48,
+            "itemId": 26,
+            "rating": 2.3,
+            "timestamp": 1112486495
+        },
+        {
+            "userId": 2,
+            "itemId": 20,
+            "rating": 2.4,
+            "timestamp": 1112484834
+        },
+        {
+            "userId": 19,
+            "itemId": 36,
+            "rating": 4.7,
+            "timestamp": 1112485707
+        },
+        {
+            "userId": 23,
+            "itemId": 21,
+            "rating": 1.5,
+            "timestamp": 1112486759
+        },
+        {
+            "userId": 25,
+            "itemId": 43,
+            "rating": 4.9,
+            "timestamp": 1112485299
+        },
+        {
+            "userId": 11,
+            "itemId": 17,
+            "rating": 3.7,
+            "timestamp": 1112485869
+        },
+        {
+            "userId": 38,
+            "itemId": 16,
+            "rating": 2.2,
+            "timestamp": 1112486320
+        },
+        {
+            "userId": 48,
+            "itemId": 20,
+            "rating": 2.3,
+            "timestamp": 1112484294
+        },
+        {
+            "userId": 26,
+            "itemId": 33,
+            "rating": 2.2,
+            "timestamp": 1112485929
+        },
+        {
+            "userId": 20,
+            "itemId": 15,
+            "rating": 4.4,
+            "timestamp": 1112485180
+        },
+        {
+            "userId": 9,
+            "itemId": 25,
+            "rating": 2.3,
+            "timestamp": 1112485649
+        },
+        {
+            "userId": 37,
+            "itemId": 44,
+            "rating": 3.2,
+            "timestamp": 1112484234
+        },
+        {
+            "userId": 3,
+            "itemId": 13,
+            "rating": 4.1,
+            "timestamp": 1112484061
+        },
+        {
+            "userId": 41,
+            "itemId": 16,
+            "rating": 4.9,
+            "timestamp": 1112485871
+        },
+        {
+            "userId": 17,
+            "itemId": 8,
+            "rating": 2.0,
+            "timestamp": 1112484166
+        },
+        {
+            "userId": 6,
+            "itemId": 28,
+            "rating": 2.7,
+            "timestamp": 1112484983
+        },
+        {
+            "userId": 28,
+            "itemId": 20,
+            "rating": 4.8,
+            "timestamp": 1112484293
+        },
+        {
+            "userId": 25,
+            "itemId": 15,
+            "rating": 3.6,
+            "timestamp": 1112485910
+        },
+        {
+            "userId": 35,
+            "itemId": 13,
+            "rating": 3.9,
+            "timestamp": 1112484916
+        },
+        {
+            "userId": 37,
+            "itemId": 26,
+            "rating": 2.0,
+            "timestamp": 1112484194
+        },
+        {
+            "userId": 26,
+            "itemId": 42,
+            "rating": 4.1,
+            "timestamp": 1112486847
+        },
+        {
+            "userId": 14,
+            "itemId": 35,
+            "rating": 2.1,
+            "timestamp": 1112486799
+        },
+        {
+            "userId": 5,
+            "itemId": 31,
+            "rating": 1.3,
+            "timestamp": 1112484500
+        },
+        {
+            "userId": 16,
+            "itemId": 4,
+            "rating": 2.5,
+            "timestamp": 1112486614
+        },
+        {
+            "userId": 17,
+            "itemId": 26,
+            "rating": 1.5,
+            "timestamp": 1112485886
+        },
+        {
+            "userId": 6,
+            "itemId": 37,
+            "rating": 1.7,
+            "timestamp": 1112484803
+        },
+        {
+            "userId": 25,
+            "itemId": 48,
+            "rating": 1.0,
+            "timestamp": 1112485471
+        },
+        {
+            "userId": 25,
+            "itemId": 17,
+            "rating": 1.8,
+            "timestamp": 1112485470
+        },
+        {
+            "userId": 20,
+            "itemId": 46,
+            "rating": 4.2,
+            "timestamp": 1112484501
+        },
+        {
+            "userId": 24,
+            "itemId": 15,
+            "rating": 3.1,
+            "timestamp": 1112486113
+        },
+        {
+            "userId": 33,
+            "itemId": 49,
+            "rating": 3.3,
+            "timestamp": 1112484435
+        },
+        {
+            "userId": 47,
+            "itemId": 41,
+            "rating": 3.0,
+            "timestamp": 1112486046
+        },
+        {
+            "userId": 11,
+            "itemId": 42,
+            "rating": 4.7,
+            "timestamp": 1112486497
+        },
+        {
+            "userId": 2,
+            "itemId": 24,
+            "rating": 2.1,
+            "timestamp": 1112486569
+        },
+        {
+            "userId": 49,
+            "itemId": 23,
+            "rating": 2.8,
+            "timestamp": 1112486112
+        },
+        {
+            "userId": 23,
+            "itemId": 28,
+            "rating": 2.2,
+            "timestamp": 1112486687
+        },
+        {
+            "userId": 18,
+            "itemId": 21,
+            "rating": 3.6,
+            "timestamp": 1112486160
+        },
+        {
+            "userId": 20,
+            "itemId": 50,
+            "rating": 1.8,
+            "timestamp": 1112485054
+        },
+        {
+            "userId": 30,
+            "itemId": 13,
+            "rating": 2.1,
+            "timestamp": 1112484161
+        },
+        {
+            "userId": 23,
+            "itemId": 2,
+            "rating": 1.8,
+            "timestamp": 1112486891
+        },
+        {
+            "userId": 20,
+            "itemId": 10,
+            "rating": 1.3,
+            "timestamp": 1112484121
+        },
+        {
+            "userId": 38,
+            "itemId": 33,
+            "rating": 4.2,
+            "timestamp": 1112486899
+        },
+        {
+            "userId": 23,
+            "itemId": 23,
+            "rating": 3.2,
+            "timestamp": 1112486664
+        },
+        {
+            "userId": 16,
+            "itemId": 40,
+            "rating": 1.0,
+            "timestamp": 1112485100
+        },
+        {
+            "userId": 16,
+            "itemId": 23,
+            "rating": 4.4,
+            "timestamp": 1112486890
+        },
+        {
+            "userId": 37,
+            "itemId": 38,
+            "rating": 3.7,
+            "timestamp": 1112486759
+        },
+        {
+            "userId": 16,
+            "itemId": 39,
+            "rating": 2.2,
+            "timestamp": 1112484046
+        },
+        {
+            "userId": 49,
+            "itemId": 16,
+            "rating": 4.2,
+            "timestamp": 1112484492
+        },
+        {
+            "userId": 42,
+            "itemId": 27,
+            "rating": 3.8,
+            "timestamp": 1112484076
+        },
+        {
+            "userId": 48,
+            "itemId": 34,
+            "rating": 4.0,
+            "timestamp": 1112485176
+        },
+        {
+            "userId": 44,
+            "itemId": 16,
+            "rating": 5.0,
+            "timestamp": 1112485940
+        },
+        {
+            "userId": 27,
+            "itemId": 47,
+            "rating": 4.3,
+            "timestamp": 1112485869
+        },
+        {
+            "userId": 24,
+            "itemId": 11,
+            "rating": 5.0,
+            "timestamp": 1112484473
+        },
+        {
+            "userId": 10,
+            "itemId": 31,
+            "rating": 1.8,
+            "timestamp": 1112486532
+        },
+        {
+            "userId": 1,
+            "itemId": 17,
+            "rating": 1.8,
+            "timestamp": 1112485367
+        },
+        {
+            "userId": 9,
+            "itemId": 26,
+            "rating": 1.3,
+            "timestamp": 1112485851
+        },
+        {
+            "userId": 36,
+            "itemId": 22,
+            "rating": 3.7,
+            "timestamp": 1112484631
+        },
+        {
+            "userId": 37,
+            "itemId": 40,
+            "rating": 1.4,
+            "timestamp": 1112484781
+        },
+        {
+            "userId": 49,
+            "itemId": 49,
+            "rating": 1.4,
+            "timestamp": 1112484723
+        },
+        {
+            "userId": 6,
+            "itemId": 18,
+            "rating": 1.0,
+            "timestamp": 1112485856
+        },
+        {
+            "userId": 3,
+            "itemId": 36,
+            "rating": 3.9,
+            "timestamp": 1112484659
+        },
+        {
+            "userId": 26,
+            "itemId": 9,
+            "rating": 2.2,
+            "timestamp": 1112484724
+        },
+        {
+            "userId": 25,
+            "itemId": 5,
+            "rating": 4.9,
+            "timestamp": 1112484915
+        },
+        {
+            "userId": 13,
+            "itemId": 46,
+            "rating": 3.4,
+            "timestamp": 1112486483
+        },
+        {
+            "userId": 3,
+            "itemId": 7,
+            "rating": 4.1,
+            "timestamp": 1112485270
+        },
+        {
+            "userId": 32,
+            "itemId": 41,
+            "rating": 1.3,
+            "timestamp": 1112486493
+        },
+        {
+            "userId": 29,
+            "itemId": 31,
+            "rating": 2.2,
+            "timestamp": 1112485639
+        },
+        {
+            "userId": 9,
+            "itemId": 14,
+            "rating": 1.5,
+            "timestamp": 1112485927
+        },
+        {
+            "userId": 23,
+            "itemId": 18,
+            "rating": 4.4,
+            "timestamp": 1112485492
+        },
+        {
+            "userId": 3,
+            "itemId": 34,
+            "rating": 2.2,
+            "timestamp": 1112484323
+        },
+        {
+            "userId": 4,
+            "itemId": 30,
+            "rating": 4.7,
+            "timestamp": 1112484024
+        },
+        {
+            "userId": 18,
+            "itemId": 47,
+            "rating": 2.9,
+            "timestamp": 1112484514
+        },
+        {
+            "userId": 22,
+            "itemId": 16,
+            "rating": 2.3,
+            "timestamp": 1112486726
+        },
+        {
+            "userId": 43,
+            "itemId": 44,
+            "rating": 1.8,
+            "timestamp": 1112485881
+        },
+        {
+            "userId": 7,
+            "itemId": 14,
+            "rating": 5.0,
+            "timestamp": 1112484491
+        },
+        {
+            "userId": 20,
+            "itemId": 7,
+            "rating": 2.7,
+            "timestamp": 1112485558
+        },
+        {
+            "userId": 20,
+            "itemId": 23,
+            "rating": 2.6,
+            "timestamp": 1112486517
+        },
+        {
+            "userId": 2,
+            "itemId": 28,
+            "rating": 3.3,
+            "timestamp": 1112486124
+        },
+        {
+            "userId": 7,
+            "itemId": 46,
+            "rating": 3.1,
+            "timestamp": 1112486115
+        },
+        {
+            "userId": 18,
+            "itemId": 2,
+            "rating": 4.0,
+            "timestamp": 1112485010
+        },
+        {
+            "userId": 30,
+            "itemId": 14,
+            "rating": 2.7,
+            "timestamp": 1112485913
+        },
+        {
+            "userId": 25,
+            "itemId": 27,
+            "rating": 2.5,
+            "timestamp": 1112486779
+        },
+        {
+            "userId": 19,
+            "itemId": 40,
+            "rating": 4.5,
+            "timestamp": 1112486322
+        },
+        {
+            "userId": 27,
+            "itemId": 32,
+            "rating": 2.2,
+            "timestamp": 1112484622
+        },
+        {
+            "userId": 28,
+            "itemId": 40,
+            "rating": 1.1,
+            "timestamp": 1112484897
+        },
+        {
+            "userId": 29,
+            "itemId": 47,
+            "rating": 1.4,
+            "timestamp": 1112486117
+        },
+        {
+            "userId": 16,
+            "itemId": 31,
+            "rating": 4.9,
+            "timestamp": 1112484784
+        },
+        {
+            "userId": 50,
+            "itemId": 16,
+            "rating": 2.8,
+            "timestamp": 1112484509
+        },
+        {
+            "userId": 46,
+            "itemId": 17,
+            "rating": 4.7,
+            "timestamp": 1112486585
+        },
+        {
+            "userId": 16,
+            "itemId": 46,
+            "rating": 4.1,
+            "timestamp": 1112484308
+        },
+        {
+            "userId": 13,
+            "itemId": 30,
+            "rating": 3.2,
+            "timestamp": 1112484320
+        },
+        {
+            "userId": 24,
+            "itemId": 40,
+            "rating": 4.5,
+            "timestamp": 1112486670
+        },
+        {
+            "userId": 12,
+            "itemId": 20,
+            "rating": 4.0,
+            "timestamp": 1112485001
+        },
+        {
+            "userId": 27,
+            "itemId": 44,
+            "rating": 2.6,
+            "timestamp": 1112484132
+        },
+        {
+            "userId": 49,
+            "itemId": 47,
+            "rating": 4.5,
+            "timestamp": 1112484983
+        },
+        {
+            "userId": 41,
+            "itemId": 20,
+            "rating": 4.4,
+            "timestamp": 1112485707
+        },
+        {
+            "userId": 46,
+            "itemId": 12,
+            "rating": 2.6,
+            "timestamp": 1112484408
+        },
+        {
+            "userId": 21,
+            "itemId": 45,
+            "rating": 1.1,
+            "timestamp": 1112485323
+        },
+        {
+            "userId": 36,
+            "itemId": 44,
+            "rating": 1.2,
+            "timestamp": 1112486485
+        },
+        {
+            "userId": 9,
+            "itemId": 27,
+            "rating": 1.1,
+            "timestamp": 1112484782
+        },
+        {
+            "userId": 45,
+            "itemId": 23,
+            "rating": 2.6,
+            "timestamp": 1112485292
+        },
+        {
+            "userId": 28,
+            "itemId": 47,
+            "rating": 2.3,
+            "timestamp": 1112486103
+        },
+        {
+            "userId": 19,
+            "itemId": 44,
+            "rating": 4.9,
+            "timestamp": 1112484639
+        },
+        {
+            "userId": 29,
+            "itemId": 46,
+            "rating": 3.7,
+            "timestamp": 1112484497
+        },
+        {
+            "userId": 9,
+            "itemId": 47,
+            "rating": 2.0,
+            "timestamp": 1112484328
+        },
+        {
+            "userId": 20,
+            "itemId": 34,
+            "rating": 2.4,
+            "timestamp": 1112484951
+        },
+        {
+            "userId": 13,
+            "itemId": 19,
+            "rating": 5.0,
+            "timestamp": 1112486134
+        },
+        {
+            "userId": 36,
+            "itemId": 45,
+            "rating": 3.0,
+            "timestamp": 1112485320
+        },
+        {
+            "userId": 29,
+            "itemId": 38,
+            "rating": 2.6,
+            "timestamp": 1112484147
+        },
+        {
+            "userId": 48,
+            "itemId": 27,
+            "rating": 1.9,
+            "timestamp": 1112485125
+        },
+        {
+            "userId": 27,
+            "itemId": 41,
+            "rating": 3.7,
+            "timestamp": 1112484202
+        },
+        {
+            "userId": 37,
+            "itemId": 18,
+            "rating": 1.5,
+            "timestamp": 1112486418
+        },
+        {
+            "userId": 21,
+            "itemId": 11,
+            "rating": 2.5,
+            "timestamp": 1112486921
+        },
+        {
+            "userId": 30,
+            "itemId": 24,
+            "rating": 2.1,
+            "timestamp": 1112484863
+        },
+        {
+            "userId": 28,
+            "itemId": 41,
+            "rating": 2.0,
+            "timestamp": 1112485840
+        },
+        {
+            "userId": 42,
+            "itemId": 34,
+            "rating": 2.6,
+            "timestamp": 1112486383
+        },
+        {
+            "userId": 34,
+            "itemId": 50,
+            "rating": 4.0,
+            "timestamp": 1112484063
+        },
+        {
+            "userId": 4,
+            "itemId": 38,
+            "rating": 2.4,
+            "timestamp": 1112485849
+        },
+        {
+            "userId": 31,
+            "itemId": 27,
+            "rating": 2.3,
+            "timestamp": 1112485165
+        },
+        {
+            "userId": 13,
+            "itemId": 28,
+            "rating": 3.5,
+            "timestamp": 1112486733
+        },
+        {
+            "userId": 28,
+            "itemId": 38,
+            "rating": 2.1,
+            "timestamp": 1112486112
+        },
+        {
+            "userId": 45,
+            "itemId": 24,
+            "rating": 4.2,
+            "timestamp": 1112485438
+        },
+        {
+            "userId": 47,
+            "itemId": 35,
+            "rating": 2.5,
+            "timestamp": 1112484611
+        },
+        {
+            "userId": 38,
+            "itemId": 49,
+            "rating": 2.7,
+            "timestamp": 1112484437
+        },
+        {
+            "userId": 14,
+            "itemId": 40,
+            "rating": 1.9,
+            "timestamp": 1112485969
+        },
+        {
+            "userId": 40,
+            "itemId": 2,
+            "rating": 3.7,
+            "timestamp": 1112484399
+        },
+        {
+            "userId": 6,
+            "itemId": 43,
+            "rating": 3.5,
+            "timestamp": 1112486097
+        },
+        {
+            "userId": 26,
+            "itemId": 39,
+            "rating": 3.2,
+            "timestamp": 1112485593
+        },
+        {
+            "userId": 46,
+            "itemId": 11,
+            "rating": 2.9,
+            "timestamp": 1112484545
+        },
+        {
+            "userId": 31,
+            "itemId": 3,
+            "rating": 3.8,
+            "timestamp": 1112485288
+        },
+        {
+            "userId": 3,
+            "itemId": 27,
+            "rating": 4.7,
+            "timestamp": 1112485432
+        },
+        {
+            "userId": 5,
+            "itemId": 12,
+            "rating": 1.7,
+            "timestamp": 1112486156
+        },
+        {
+            "userId": 41,
+            "itemId": 33,
+            "rating": 3.0,
+            "timestamp": 1112486697
+        },
+        {
+            "userId": 22,
+            "itemId": 23,
+            "rating": 3.1,
+            "timestamp": 1112484272
+        },
+        {
+            "userId": 16,
+            "itemId": 42,
+            "rating": 3.9,
+            "timestamp": 1112486275
+        },
+        {
+            "userId": 16,
+            "itemId": 25,
+            "rating": 1.8,
+            "timestamp": 1112485674
+        },
+        {
+            "userId": 34,
+            "itemId": 19,
+            "rating": 1.4,
+            "timestamp": 1112484533
+        },
+        {
+            "userId": 49,
+            "itemId": 3,
+            "rating": 4.4,
+            "timestamp": 1112486822
+        },
+        {
+            "userId": 29,
+            "itemId": 24,
+            "rating": 3.5,
+            "timestamp": 1112484061
+        },
+        {
+            "userId": 9,
+            "itemId": 9,
+            "rating": 3.9,
+            "timestamp": 1112485736
+        },
+        {
+            "userId": 21,
+            "itemId": 37,
+            "rating": 2.6,
+            "timestamp": 1112484317
+        },
+        {
+            "userId": 45,
+            "itemId": 27,
+            "rating": 4.6,
+            "timestamp": 1112485606
+        },
+        {
+            "userId": 43,
+            "itemId": 30,
+            "rating": 4.9,
+            "timestamp": 1112485386
+        },
+        {
+            "userId": 28,
+            "itemId": 24,
+            "rating": 1.4,
+            "timestamp": 1112485567
+        },
+        {
+            "userId": 20,
+            "itemId": 24,
+            "rating": 1.6,
+            "timestamp": 1112484253
+        },
+        {
+            "userId": 47,
+            "itemId": 48,
+            "rating": 2.1,
+            "timestamp": 1112485894
+        },
+        {
+            "userId": 3,
+            "itemId": 44,
+            "rating": 2.0,
+            "timestamp": 1112485145
+        },
+        {
+            "userId": 39,
+            "itemId": 45,
+            "rating": 2.7,
+            "timestamp": 1112484455
+        },
+        {
+            "userId": 21,
+            "itemId": 12,
+            "rating": 3.6,
+            "timestamp": 1112484967
+        },
+        {
+            "userId": 42,
+            "itemId": 7,
+            "rating": 3.7,
+            "timestamp": 1112486228
+        },
+        {
+            "userId": 12,
+            "itemId": 19,
+            "rating": 3.5,
+            "timestamp": 1112486703
+        },
+        {
+            "userId": 6,
+            "itemId": 36,
+            "rating": 2.5,
+            "timestamp": 1112486866
+        },
+        {
+            "userId": 42,
+            "itemId": 3,
+            "rating": 1.2,
+            "timestamp": 1112486805
+        },
+        {
+            "userId": 2,
+            "itemId": 18,
+            "rating": 2.5,
+            "timestamp": 1112484953
+        },
+        {
+            "userId": 8,
+            "itemId": 19,
+            "rating": 1.8,
+            "timestamp": 1112484924
+        },
+        {
+            "userId": 23,
+            "itemId": 19,
+            "rating": 4.7,
+            "timestamp": 1112484479
+        },
+        {
+            "userId": 19,
+            "itemId": 42,
+            "rating": 4.4,
+            "timestamp": 1112484226
+        },
+        {
+            "userId": 7,
+            "itemId": 6,
+            "rating": 3.6,
+            "timestamp": 1112486571
+        },
+        {
+            "userId": 4,
+            "itemId": 7,
+            "rating": 4.7,
+            "timestamp": 1112484440
+        },
+        {
+            "userId": 9,
+            "itemId": 8,
+            "rating": 3.3,
+            "timestamp": 1112485794
+        },
+        {
+            "userId": 27,
+            "itemId": 29,
+            "rating": 4.2,
+            "timestamp": 1112485439
+        },
+        {
+            "userId": 15,
+            "itemId": 10,
+            "rating": 2.8,
+            "timestamp": 1112486354
+        },
+        {
+            "userId": 27,
+            "itemId": 16,
+            "rating": 1.4,
+            "timestamp": 1112484875
+        },
+        {
+            "userId": 19,
+            "itemId": 39,
+            "rating": 4.5,
+            "timestamp": 1112484524
+        },
+        {
+            "userId": 21,
+            "itemId": 10,
+            "rating": 3.0,
+            "timestamp": 1112486723
+        },
+        {
+            "userId": 15,
+            "itemId": 20,
+            "rating": 1.6,
+            "timestamp": 1112484826
+        },
+        {
+            "userId": 23,
+            "itemId": 36,
+            "rating": 4.4,
+            "timestamp": 1112486435
+        },
+        {
+            "userId": 43,
+            "itemId": 5,
+            "rating": 4.3,
+            "timestamp": 1112486533
+        },
+        {
+            "userId": 1,
+            "itemId": 16,
+            "rating": 3.3,
+            "timestamp": 1112485621
+        },
+        {
+            "userId": 11,
+            "itemId": 9,
+            "rating": 4.0,
+            "timestamp": 1112484498
+        },
+        {
+            "userId": 40,
+            "itemId": 25,
+            "rating": 1.2,
+            "timestamp": 1112486212
+        },
+        {
+            "userId": 49,
+            "itemId": 39,
+            "rating": 1.6,
+            "timestamp": 1112484302
+        },
+        {
+            "userId": 1,
+            "itemId": 47,
+            "rating": 3.0,
+            "timestamp": 1112484390
+        },
+        {
+            "userId": 36,
+            "itemId": 25,
+            "rating": 3.2,
+            "timestamp": 1112486094
+        },
+        {
+            "userId": 28,
+            "itemId": 22,
+            "rating": 3.8,
+            "timestamp": 1112486605
+        },
+        {
+            "userId": 35,
+            "itemId": 30,
+            "rating": 2.0,
+            "timestamp": 1112485267
+        },
+        {
+            "userId": 8,
+            "itemId": 18,
+            "rating": 1.0,
+            "timestamp": 1112485089
+        },
+        {
+            "userId": 35,
+            "itemId": 15,
+            "rating": 3.5,
+            "timestamp": 1112485346
+        },
+        {
+            "userId": 45,
+            "itemId": 46,
+            "rating": 3.3,
+            "timestamp": 1112484673
+        },
+        {
+            "userId": 4,
+            "itemId": 29,
+            "rating": 4.9,
+            "timestamp": 1112484748
+        },
+        {
+            "userId": 38,
+            "itemId": 27,
+            "rating": 3.2,
+            "timestamp": 1112485888
+        },
+        {
+            "userId": 33,
+            "itemId": 34,
+            "rating": 2.4,
+            "timestamp": 1112484943
+        },
+        {
+            "userId": 22,
+            "itemId": 22,
+            "rating": 5.0,
+            "timestamp": 1112486899
+        },
+        {
+            "userId": 28,
+            "itemId": 46,
+            "rating": 2.4,
+            "timestamp": 1112485367
+        },
+        {
+            "userId": 49,
+            "itemId": 46,
+            "rating": 2.0,
+            "timestamp": 1112485978
+        },
+        {
+            "userId": 20,
+            "itemId": 33,
+            "rating": 4.2,
+            "timestamp": 1112486614
+        },
+        {
+            "userId": 35,
+            "itemId": 10,
+            "rating": 3.2,
+            "timestamp": 1112485231
+        },
+        {
+            "userId": 41,
+            "itemId": 40,
+            "rating": 2.5,
+            "timestamp": 1112486961
+        },
+        {
+            "userId": 42,
+            "itemId": 49,
+            "rating": 2.8,
+            "timestamp": 1112484645
+        },
+        {
+            "userId": 33,
+            "itemId": 5,
+            "rating": 4.1,
+            "timestamp": 1112485201
+        },
+        {
+            "userId": 22,
+            "itemId": 24,
+            "rating": 3.1,
+            "timestamp": 1112485305
+        },
+        {
+            "userId": 21,
+            "itemId": 24,
+            "rating": 3.7,
+            "timestamp": 1112486370
+        },
+        {
+            "userId": 28,
+            "itemId": 34,
+            "rating": 4.4,
+            "timestamp": 1112486859
+        },
+        {
+            "userId": 23,
+            "itemId": 27,
+            "rating": 2.4,
+            "timestamp": 1112484400
+        },
+        {
+            "userId": 17,
+            "itemId": 12,
+            "rating": 1.9,
+            "timestamp": 1112485630
+        },
+        {
+            "userId": 6,
+            "itemId": 5,
+            "rating": 1.2,
+            "timestamp": 1112485539
+        },
+        {
+            "userId": 22,
+            "itemId": 44,
+            "rating": 1.3,
+            "timestamp": 1112484385
+        },
+        {
+            "userId": 18,
+            "itemId": 22,
+            "rating": 1.4,
+            "timestamp": 1112486614
+        },
+        {
+            "userId": 46,
+            "itemId": 43,
+            "rating": 2.4,
+            "timestamp": 1112485794
+        },
+        {
+            "userId": 36,
+            "itemId": 11,
+            "rating": 2.8,
+            "timestamp": 1112485333
+        },
+        {
+            "userId": 19,
+            "itemId": 4,
+            "rating": 4.9,
+            "timestamp": 1112484253
+        },
+        {
+            "userId": 3,
+            "itemId": 23,
+            "rating": 3.2,
+            "timestamp": 1112486944
+        },
+        {
+            "userId": 9,
+            "itemId": 10,
+            "rating": 1.5,
+            "timestamp": 1112486150
+        },
+        {
+            "userId": 26,
+            "itemId": 31,
+            "rating": 3.7,
+            "timestamp": 1112486117
+        },
+        {
+            "userId": 1,
+            "itemId": 21,
+            "rating": 4.6,
+            "timestamp": 1112485091
+        },
+        {
+            "userId": 43,
+            "itemId": 23,
+            "rating": 3.9,
+            "timestamp": 1112484439
+        },
+        {
+            "userId": 13,
+            "itemId": 3,
+            "rating": 1.4,
+            "timestamp": 1112486628
+        },
+        {
+            "userId": 3,
+            "itemId": 20,
+            "rating": 2.6,
+            "timestamp": 1112485510
+        },
+        {
+            "userId": 25,
+            "itemId": 12,
+            "rating": 2.5,
+            "timestamp": 1112485697
+        },
+        {
+            "userId": 15,
+            "itemId": 19,
+            "rating": 3.7,
+            "timestamp": 1112485649
+        },
+        {
+            "userId": 24,
+            "itemId": 13,
+            "rating": 3.3,
+            "timestamp": 1112486523
+        },
+        {
+            "userId": 15,
+            "itemId": 35,
+            "rating": 1.1,
+            "timestamp": 1112484378
+        },
+        {
+            "userId": 6,
+            "itemId": 26,
+            "rating": 1.9,
+            "timestamp": 1112486946
+        },
+        {
+            "userId": 17,
+            "itemId": 46,
+            "rating": 2.3,
+            "timestamp": 1112484946
+        },
+        {
+            "userId": 7,
+            "itemId": 44,
+            "rating": 2.6,
+            "timestamp": 1112486371
+        },
+        {
+            "userId": 4,
+            "itemId": 43,
+            "rating": 3.4,
+            "timestamp": 1112485126
+        },
+        {
+            "userId": 1,
+            "itemId": 18,
+            "rating": 1.4,
+            "timestamp": 1112486883
+        },
+        {
+            "userId": 11,
+            "itemId": 14,
+            "rating": 2.5,
+            "timestamp": 1112485123
+        },
+        {
+            "userId": 24,
+            "itemId": 41,
+            "rating": 4.6,
+            "timestamp": 1112484987
+        },
+        {
+            "userId": 26,
+            "itemId": 10,
+            "rating": 1.7,
+            "timestamp": 1112486940
+        },
+        {
+            "userId": 4,
+            "itemId": 35,
+            "rating": 3.5,
+            "timestamp": 1112485876
+        },
+        {
+            "userId": 15,
+            "itemId": 45,
+            "rating": 3.9,
+            "timestamp": 1112486898
+        },
+        {
+            "userId": 35,
+            "itemId": 39,
+            "rating": 4.7,
+            "timestamp": 1112484194
+        },
+        {
+            "userId": 15,
+            "itemId": 16,
+            "rating": 4.2,
+            "timestamp": 1112485386
+        },
+        {
+            "userId": 47,
+            "itemId": 30,
+            "rating": 2.7,
+            "timestamp": 1112484619
+        },
+        {
+            "userId": 34,
+            "itemId": 7,
+            "rating": 4.7,
+            "timestamp": 1112485265
+        },
+        {
+            "userId": 18,
+            "itemId": 32,
+            "rating": 1.1,
+            "timestamp": 1112486652
+        },
+        {
+            "userId": 2,
+            "itemId": 10,
+            "rating": 1.3,
+            "timestamp": 1112486794
+        },
+        {
+            "userId": 36,
+            "itemId": 5,
+            "rating": 2.8,
+            "timestamp": 1112484002
+        },
+        {
+            "userId": 49,
+            "itemId": 50,
+            "rating": 1.4,
+            "timestamp": 1112485513
+        },
+        {
+            "userId": 21,
+            "itemId": 44,
+            "rating": 3.2,
+            "timestamp": 1112484383
+        },
+        {
+            "userId": 25,
+            "itemId": 14,
+            "rating": 3.8,
+            "timestamp": 1112485518
+        },
+        {
+            "userId": 33,
+            "itemId": 1,
+            "rating": 4.2,
+            "timestamp": 1112485255
+        },
+        {
+            "userId": 39,
+            "itemId": 7,
+            "rating": 2.8,
+            "timestamp": 1112486520
+        },
+        {
+            "userId": 30,
+            "itemId": 35,
+            "rating": 3.2,
+            "timestamp": 1112484524
+        },
+        {
+            "userId": 29,
+            "itemId": 50,
+            "rating": 2.6,
+            "timestamp": 1112485713
+        },
+        {
+            "userId": 16,
+            "itemId": 11,
+            "rating": 1.2,
+            "timestamp": 1112486513
+        },
+        {
+            "userId": 42,
+            "itemId": 15,
+            "rating": 4.8,
+            "timestamp": 1112486233
+        },
+        {
+            "userId": 22,
+            "itemId": 20,
+            "rating": 2.6,
+            "timestamp": 1112485544
+        },
+        {
+            "userId": 21,
+            "itemId": 6,
+            "rating": 2.2,
+            "timestamp": 1112485669
+        },
+        {
+            "userId": 10,
+            "itemId": 16,
+            "rating": 1.8,
+            "timestamp": 1112484887
+        },
+        {
+            "userId": 30,
+            "itemId": 43,
+            "rating": 1.2,
+            "timestamp": 1112485407
+        },
+        {
+            "userId": 17,
+            "itemId": 23,
+            "rating": 3.5,
+            "timestamp": 1112485704
+        },
+        {
+            "userId": 1,
+            "itemId": 20,
+            "rating": 4.9,
+            "timestamp": 1112484943
+        },
+        {
+            "userId": 47,
+            "itemId": 9,
+            "rating": 1.7,
+            "timestamp": 1112486238
+        },
+        {
+            "userId": 37,
+            "itemId": 12,
+            "rating": 3.4,
+            "timestamp": 1112486619
+        },
+        {
+            "userId": 2,
+            "itemId": 48,
+            "rating": 1.9,
+            "timestamp": 1112484364
+        },
+        {
+            "userId": 49,
+            "itemId": 30,
+            "rating": 4.7,
+            "timestamp": 1112484881
+        },
+        {
+            "userId": 18,
+            "itemId": 45,
+            "rating": 1.7,
+            "timestamp": 1112484220
+        },
+        {
+            "userId": 32,
+            "itemId": 20,
+            "rating": 1.8,
+            "timestamp": 1112486944
+        },
+        {
+            "userId": 2,
+            "itemId": 42,
+            "rating": 4.1,
+            "timestamp": 1112485261
+        },
+        {
+            "userId": 2,
+            "itemId": 12,
+            "rating": 4.3,
+            "timestamp": 1112486726
+        },
+        {
+            "userId": 39,
+            "itemId": 3,
+            "rating": 4.1,
+            "timestamp": 1112486933
+        },
+        {
+            "userId": 15,
+            "itemId": 4,
+            "rating": 4.3,
+            "timestamp": 1112486009
+        },
+        {
+            "userId": 4,
+            "itemId": 5,
+            "rating": 2.1,
+            "timestamp": 1112484403
+        },
+        {
+            "userId": 14,
+            "itemId": 22,
+            "rating": 3.5,
+            "timestamp": 1112485709
+        },
+        {
+            "userId": 6,
+            "itemId": 39,
+            "rating": 1.6,
+            "timestamp": 1112484401
+        },
+        {
+            "userId": 28,
+            "itemId": 2,
+            "rating": 1.5,
+            "timestamp": 1112484666
+        },
+        {
+            "userId": 45,
+            "itemId": 45,
+            "rating": 1.5,
+            "timestamp": 1112486383
+        },
+        {
+            "userId": 36,
+            "itemId": 41,
+            "rating": 1.1,
+            "timestamp": 1112485525
+        },
+        {
+            "userId": 8,
+            "itemId": 40,
+            "rating": 4.3,
+            "timestamp": 1112486729
+        },
+        {
+            "userId": 18,
+            "itemId": 41,
+            "rating": 1.8,
+            "timestamp": 1112485812
+        },
+        {
+            "userId": 4,
+            "itemId": 10,
+            "rating": 4.2,
+            "timestamp": 1112485159
+        },
+        {
+            "userId": 33,
+            "itemId": 42,
+            "rating": 2.8,
+            "timestamp": 1112484203
+        },
+        {
+            "userId": 5,
+            "itemId": 35,
+            "rating": 2.7,
+            "timestamp": 1112485838
+        },
+        {
+            "userId": 46,
+            "itemId": 7,
+            "rating": 3.9,
+            "timestamp": 1112485394
+        },
+        {
+            "userId": 29,
+            "itemId": 35,
+            "rating": 3.0,
+            "timestamp": 1112485198
+        },
+        {
+            "userId": 21,
+            "itemId": 31,
+            "rating": 4.9,
+            "timestamp": 1112486625
+        },
+        {
+            "userId": 22,
+            "itemId": 8,
+            "rating": 3.7,
+            "timestamp": 1112485896
+        },
+        {
+            "userId": 14,
+            "itemId": 29,
+            "rating": 3.2,
+            "timestamp": 1112486031
+        },
+        {
+            "userId": 25,
+            "itemId": 21,
+            "rating": 1.0,
+            "timestamp": 1112485215
+        },
+        {
+            "userId": 41,
+            "itemId": 50,
+            "rating": 1.1,
+            "timestamp": 1112485530
+        },
+        {
+            "userId": 19,
+            "itemId": 16,
+            "rating": 2.3,
+            "timestamp": 1112484586
+        },
+        {
+            "userId": 42,
+            "itemId": 40,
+            "rating": 4.7,
+            "timestamp": 1112484535
+        },
+        {
+            "userId": 15,
+            "itemId": 42,
+            "rating": 2.8,
+            "timestamp": 1112484252
+        },
+        {
+            "userId": 1,
+            "itemId": 15,
+            "rating": 1.3,
+            "timestamp": 1112485563
+        },
+        {
+            "userId": 11,
+            "itemId": 37,
+            "rating": 2.9,
+            "timestamp": 1112485757
+        },
+        {
+            "userId": 20,
+            "itemId": 11,
+            "rating": 4.9,
+            "timestamp": 1112485514
+        },
+        {
+            "userId": 49,
+            "itemId": 43,
+            "rating": 4.4,
+            "timestamp": 1112485064
+        },
+        {
+            "userId": 11,
+            "itemId": 39,
+            "rating": 2.6,
+            "timestamp": 1112485246
+        },
+        {
+            "userId": 22,
+            "itemId": 46,
+            "rating": 3.4,
+            "timestamp": 1112484941
+        },
+        {
+            "userId": 3,
+            "itemId": 1,
+            "rating": 2.8,
+            "timestamp": 1112484459
+        },
+        {
+            "userId": 28,
+            "itemId": 12,
+            "rating": 3.8,
+            "timestamp": 1112485853
+        },
+        {
+            "userId": 1,
+            "itemId": 14,
+            "rating": 2.0,
+            "timestamp": 1112486493
+        },
+        {
+            "userId": 44,
+            "itemId": 38,
+            "rating": 2.0,
+            "timestamp": 1112485709
+        },
+        {
+            "userId": 46,
+            "itemId": 16,
+            "rating": 4.2,
+            "timestamp": 1112486720
+        },
+        {
+            "userId": 37,
+            "itemId": 22,
+            "rating": 2.3,
+            "timestamp": 1112486069
+        },
+        {
+            "userId": 26,
+            "itemId": 25,
+            "rating": 2.1,
+            "timestamp": 1112484431
+        },
+        {
+            "userId": 11,
+            "itemId": 36,
+            "rating": 2.7,
+            "timestamp": 1112485134
+        },
+        {
+            "userId": 14,
+            "itemId": 1,
+            "rating": 4.6,
+            "timestamp": 1112484142
+        },
+        {
+            "userId": 14,
+            "itemId": 24,
+            "rating": 2.7,
+            "timestamp": 1112484392
+        },
+        {
+            "userId": 23,
+            "itemId": 43,
+            "rating": 4.9,
+            "timestamp": 1112484168
+        },
+        {
+            "userId": 6,
+            "itemId": 21,
+            "rating": 3.9,
+            "timestamp": 1112486345
+        },
+        {
+            "userId": 47,
+            "itemId": 50,
+            "rating": 4.5,
+            "timestamp": 1112484239
+        },
+        {
+            "userId": 26,
+            "itemId": 11,
+            "rating": 3.2,
+            "timestamp": 1112484137
+        },
+        {
+            "userId": 40,
+            "itemId": 12,
+            "rating": 1.6,
+            "timestamp": 1112485518
+        },
+        {
+            "userId": 44,
+            "itemId": 41,
+            "rating": 1.2,
+            "timestamp": 1112484857
+        },
+        {
+            "userId": 12,
+            "itemId": 12,
+            "rating": 3.8,
+            "timestamp": 1112484759
+        },
+        {
+            "userId": 20,
+            "itemId": 22,
+            "rating": 1.3,
+            "timestamp": 1112486281
+        },
+        {
+            "userId": 12,
+            "itemId": 44,
+            "rating": 2.0,
+            "timestamp": 1112485971
+        },
+        {
+            "userId": 49,
+            "itemId": 26,
+            "rating": 1.9,
+            "timestamp": 1112485441
+        },
+        {
+            "userId": 23,
+            "itemId": 20,
+            "rating": 4.4,
+            "timestamp": 1112486993
+        },
+        {
+            "userId": 28,
+            "itemId": 45,
+            "rating": 2.2,
+            "timestamp": 1112486575
+        },
+        {
+            "userId": 5,
+            "itemId": 9,
+            "rating": 4.4,
+            "timestamp": 1112486996
+        },
+        {
+            "userId": 48,
+            "itemId": 38,
+            "rating": 4.8,
+            "timestamp": 1112484991
+        },
+        {
+            "userId": 47,
+            "itemId": 45,
+            "rating": 2.8,
+            "timestamp": 1112486230
+        },
+        {
+            "userId": 38,
+            "itemId": 13,
+            "rating": 1.6,
+            "timestamp": 1112486309
+        },
+        {
+            "userId": 11,
+            "itemId": 12,
+            "rating": 4.1,
+            "timestamp": 1112484444
+        },
+        {
+            "userId": 20,
+            "itemId": 14,
+            "rating": 3.0,
+            "timestamp": 1112484715
+        },
+        {
+            "userId": 42,
+            "itemId": 32,
+            "rating": 2.9,
+            "timestamp": 1112485275
+        },
+        {
+            "userId": 48,
+            "itemId": 31,
+            "rating": 2.5,
+            "timestamp": 1112486830
+        },
+        {
+            "userId": 41,
+            "itemId": 39,
+            "rating": 4.1,
+            "timestamp": 1112485042
+        },
+        {
+            "userId": 45,
+            "itemId": 48,
+            "rating": 2.1,
+            "timestamp": 1112486527
+        },
+        {
+            "userId": 31,
+            "itemId": 30,
+            "rating": 4.8,
+            "timestamp": 1112486321
+        },
+        {
+            "userId": 19,
+            "itemId": 23,
+            "rating": 2.4,
+            "timestamp": 1112484744
+        },
+        {
+            "userId": 35,
+            "itemId": 49,
+            "rating": 4.4,
+            "timestamp": 1112486755
+        },
+        {
+            "userId": 19,
+            "itemId": 8,
+            "rating": 2.2,
+            "timestamp": 1112485632
+        },
+        {
+            "userId": 12,
+            "itemId": 17,
+            "rating": 2.0,
+            "timestamp": 1112484273
+        },
+        {
+            "userId": 18,
+            "itemId": 35,
+            "rating": 3.0,
+            "timestamp": 1112484503
+        },
+        {
+            "userId": 23,
+            "itemId": 26,
+            "rating": 4.9,
+            "timestamp": 1112485803
+        },
+        {
+            "userId": 15,
+            "itemId": 15,
+            "rating": 1.3,
+            "timestamp": 1112485257
+        },
+        {
+            "userId": 28,
+            "itemId": 50,
+            "rating": 1.2,
+            "timestamp": 1112484195
+        },
+        {
+            "userId": 15,
+            "itemId": 43,
+            "rating": 3.6,
+            "timestamp": 1112484827
+        },
+        {
+            "userId": 33,
+            "itemId": 7,
+            "rating": 4.8,
+            "timestamp": 1112484163
+        },
+        {
+            "userId": 36,
+            "itemId": 17,
+            "rating": 3.5,
+            "timestamp": 1112486151
+        },
+        {
+            "userId": 44,
+            "itemId": 44,
+            "rating": 3.8,
+            "timestamp": 1112486021
+        },
+        {
+            "userId": 8,
+            "itemId": 4,
+            "rating": 3.3,
+            "timestamp": 1112486950
+        },
+        {
+            "userId": 20,
+            "itemId": 21,
+            "rating": 1.3,
+            "timestamp": 1112484308
+        },
+        {
+            "userId": 27,
+            "itemId": 24,
+            "rating": 4.1,
+            "timestamp": 1112486835
+        },
+        {
+            "userId": 32,
+            "itemId": 31,
+            "rating": 1.9,
+            "timestamp": 1112484628
+        },
+        {
+            "userId": 34,
+            "itemId": 2,
+            "rating": 2.2,
+            "timestamp": 1112486684
+        },
+        {
+            "userId": 9,
+            "itemId": 32,
+            "rating": 2.8,
+            "timestamp": 1112484614
+        },
+        {
+            "userId": 25,
+            "itemId": 9,
+            "rating": 4.2,
+            "timestamp": 1112485009
+        },
+        {
+            "userId": 13,
+            "itemId": 26,
+            "rating": 2.3,
+            "timestamp": 1112486163
+        },
+        {
+            "userId": 7,
+            "itemId": 43,
+            "rating": 2.4,
+            "timestamp": 1112484146
+        },
+        {
+            "userId": 46,
+            "itemId": 23,
+            "rating": 4.7,
+            "timestamp": 1112485759
+        },
+        {
+            "userId": 7,
+            "itemId": 17,
+            "rating": 3.2,
+            "timestamp": 1112486245
+        },
+        {
+            "userId": 6,
+            "itemId": 20,
+            "rating": 4.5,
+            "timestamp": 1112485824
+        },
+        {
+            "userId": 12,
+            "itemId": 38,
+            "rating": 2.3,
+            "timestamp": 1112486341
+        },
+        {
+            "userId": 28,
+            "itemId": 37,
+            "rating": 1.0,
+            "timestamp": 1112485586
+        },
+        {
+            "userId": 9,
+            "itemId": 30,
+            "rating": 4.5,
+            "timestamp": 1112486232
+        },
+        {
+            "userId": 17,
+            "itemId": 44,
+            "rating": 1.5,
+            "timestamp": 1112486944
+        },
+        {
+            "userId": 1,
+            "itemId": 4,
+            "rating": 2.6,
+            "timestamp": 1112486031
+        },
+        {
+            "userId": 4,
+            "itemId": 50,
+            "rating": 4.6,
+            "timestamp": 1112485519
+        },
+        {
+            "userId": 45,
+            "itemId": 37,
+            "rating": 4.3,
+            "timestamp": 1112485587
+        }
     ]
 }
