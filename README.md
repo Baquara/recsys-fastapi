@@ -295,7 +295,7 @@ As part of my master's degree project, I would greatly appreciate your feedback 
 
 Your feedback is invaluable to me, and I appreciate you taking the time to help me with my project. If you have any additional comments or insights, please feel free to share them. Thank you!
 
-``
+<!--
 # Project TODOs
 
 Here is a list of potential improvements and future directions for the project.
@@ -319,4 +319,4 @@ This project uses the following license: GPL3 License.
 
 This project is currently in the development stage and might be subject to changes.
 ``
-
+-->
