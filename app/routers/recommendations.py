@@ -1,8 +1,13 @@
-from fastapi import APIRouter, HTTPException, Query
+from fastapi import APIRouter, Depends, HTTPException, Query
+from app.auth.dependencies import get_current_user
 from app.database import engine
 from app.services import recommendation_service
 
-router = APIRouter(prefix="/recommendations", tags=["Recommendations"])
+router = APIRouter(
+    prefix="/recommendations",
+    tags=["Recommendations"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 @router.get(

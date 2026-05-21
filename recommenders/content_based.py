@@ -15,25 +15,24 @@ import time
 from typing import Any, Dict, List
 
 import pandas as pd
-from sklearn.feature_extraction.text import TfidfVectorizer
-from sklearn.metrics.pairwise import linear_kernel
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
+from app import hardware
 from app.config import settings
 
 logger = logging.getLogger(__name__)
 
 
 def _build_similarity_index(df: pd.DataFrame) -> Dict[Any, List]:
-    tf = TfidfVectorizer(
+    tf = hardware.get_tfidf_vectorizer(
         analyzer="word",
         ngram_range=(1, settings.content_ngram_max),
         min_df=settings.content_min_df,
         stop_words="english",
     )
     tfidf_matrix = tf.fit_transform(df["description"] + " | " + df["tag"])
-    cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
+    cosine_sim = hardware.compute_cosine_similarity(tfidf_matrix)
 
     results: Dict[Any, List] = {}
     for idx, row in df.iterrows():

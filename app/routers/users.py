@@ -1,11 +1,16 @@
 from typing import List
 from fastapi import APIRouter, Depends, HTTPException, status
 from sqlalchemy.orm import Session
+from app.auth.dependencies import get_current_user
 from app.database import get_db
 from app.schemas.user import UserRatingRead, UserRatingsPayload, UserRatingsUpdatePayload
 from app.repositories import user_repository
 
-router = APIRouter(prefix="/users", tags=["Users"])
+router = APIRouter(
+    prefix="/users",
+    tags=["Users"],
+    dependencies=[Depends(get_current_user)],
+)
 
 
 @router.get(

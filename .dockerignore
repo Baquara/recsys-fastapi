@@ -1,0 +1,45 @@
+# Version control
+.git
+.gitignore
+
+# Python artefacts
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.egg-info
+.eggs
+dist
+build
+
+# Virtual environments
+.venv
+venv
+env
+
+# Tests (not needed at runtime)
+tests/
+pytest.ini
+.coverage
+htmlcov/
+
+# Development data (the container uses its own volume)
+data/*.db
+data/*.db-journal
+data/*.db-shm
+data/*.db-wal
+
+# IDE / OS
+.idea
+.vscode
+*.DS_Store
+
+# Docs (not needed inside the image)
+docs/
+README.md
+CHANGELOG.md
+
+# Environment files (secrets must not be baked into the image)
+.env
+.env.*
+!.env.example

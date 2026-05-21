@@ -1,13 +1,18 @@
 import os
 from fastapi import APIRouter, Depends
 from sqlalchemy.orm import Session
+from app.auth.dependencies import get_current_user
 from app.database import get_db
 from app.repositories import item_repository, user_repository, event_repository
 from app.services import system_service
 from app.schemas.recommendation import SystemInfo
 from app.config import settings
 
-router = APIRouter(prefix="/admin", tags=["Admin"])
+router = APIRouter(
+    prefix="/admin",
+    tags=["Admin"],
+    dependencies=[Depends(get_current_user)],
+)
 
 _DB_PATH = os.path.abspath(
     settings.database_url.replace("sqlite:///", "").replace("./", "")

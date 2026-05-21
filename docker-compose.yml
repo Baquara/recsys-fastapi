@@ -1,0 +1,43 @@
+services:
+  api:
+    build: .
+    ports:
+      - "${APP_PORT:-8000}:8000"
+    volumes:
+      # SQLite database persists across restarts
+      - recsys_data:/app/data
+    environment:
+      # ── Database ────────────────────────────────────────────────────────────
+      DATABASE_URL: sqlite:///./data/db0.db
+
+      # ── Security ─────────────────────────────────────────────────────────
+      # Generate a real secret: python -c "import secrets; print(secrets.token_hex(32))"
+      SECRET_KEY: ${SECRET_KEY:-CHANGE_THIS_IN_PRODUCTION}
+      FIRST_SUPERUSER: ${FIRST_SUPERUSER:-admin}
+      FIRST_SUPERUSER_PASSWORD: ${FIRST_SUPERUSER_PASSWORD:-changeme}
+      DISABLE_SECURITY: ${DISABLE_SECURITY:-false}
+      CORS_ORIGINS: ${CORS_ORIGINS:-*}
+      RATE_LIMIT_CALLS: ${RATE_LIMIT_CALLS:-100}
+      RATE_LIMIT_PERIOD: ${RATE_LIMIT_PERIOD:-60}
+      ACCESS_TOKEN_EXPIRE_MINUTES: ${ACCESS_TOKEN_EXPIRE_MINUTES:-30}
+
+      # ── Hardware backend ─────────────────────────────────────────────────
+      # none | intel | cuda  (see README for details)
+      HARDWARE_BACKEND: ${HARDWARE_BACKEND:-none}
+
+      # ── Recommender tuning ───────────────────────────────────────────────
+      HYBRID_THRESHOLD: ${HYBRID_THRESHOLD:-5}
+      HYBRID_ALPHA: ${HYBRID_ALPHA:-0.5}
+      COLLAB_N_NEIGHBORS: ${COLLAB_N_NEIGHBORS:-20}
+
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python", "-c",
+             "import urllib.request; urllib.request.urlopen('http://localhost:8000/openapi.json')"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
+
+volumes:
+  recsys_data:

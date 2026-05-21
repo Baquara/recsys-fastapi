@@ -18,10 +18,10 @@ from typing import Any, Dict, List
 import pandas as pd
 from fuzzywuzzy import fuzz
 from scipy.sparse import csr_matrix
-from sklearn.neighbors import NearestNeighbors
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
+from app import hardware
 from app.config import settings
 
 logger = logging.getLogger(__name__)
@@ -81,7 +81,7 @@ def recommend(engine: Engine, sel_item: str, n_recommendations: int) -> Dict[str
     }
     mat_sparse = csr_matrix(item_user_mat.values)
 
-    model = NearestNeighbors(
+    model = hardware.get_nearest_neighbors(
         metric="cosine",
         algorithm="brute",
         n_neighbors=settings.collab_n_neighbors,

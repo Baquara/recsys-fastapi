@@ -1,322 +1,208 @@
 # Recommender System API
 
-The Recommender System API is a general-purpose recommendation engine that provides API endpoints for managing items, users, events, and generating recommendations. It's built using Python's FastAPI and SQLite, and incorporates collaborative filtering and content-based recommendation models to provide real-time and personalized item recommendations.
+A general-purpose recommendation engine built with **FastAPI** and **SQLite**. Supports collaborative filtering, content-based filtering, hybrid recommendations, and a self-configuring endpoint that automatically selects the best algorithm based on available data.
 
-![API](./api.png)
+## Algorithms
 
+| Endpoint | Algorithm | Best for |
+|---|---|---|
+| `GET /recommendations/collaborative` | KNN cosine similarity on the user–item matrix | Rich rating history |
+| `GET /recommendations/content-based` | TF-IDF cosine similarity on description + tags | Cold-start / new items |
+| `GET /recommendations/hybrid` | Weighted combination of both (configurable α) | Sparse data |
+| `GET /recommendations/auto` | Self-configuring — infers the best method from data | General use |
 
-## Features
+### Self-configuring logic (`/auto`)
 
-- CRUD operations for managing items, users and events.
-- Real-time recommendation using collaborative filtering and content-based models.
-- Customizable recommendation parameters.
-- Endpoints for monitoring system stats.
+The `/auto` endpoint inspects the seed item's rating count and picks the algorithm automatically:
 
+| Ratings for seed item | Method chosen |
+|---|---|
+| 0 | `content_based` — no behavioural signal yet |
+| 1 – `HYBRID_THRESHOLD-1` | `hybrid` — sparse signal, combine both |
+| ≥ `HYBRID_THRESHOLD` | `collaborative` — sufficient rating history |
 
-## Accessing the API
+The response always includes `method`, `reason`, and `ratings_count` so the decision is fully transparent.
 
-The API is accessible at the endpoint [https://recsysapi-cz0t.onrender.com/](https://recsysapi-cz0t.onrender.com/). Users can interact with the API, performing actions such as adding, removing, and fetching items. The API can also be used to generate recommendations.
-
-## Example Inputs
-
-`items.json` and `users.json` are the files that provide examples of the format that the API accepts.
-
-
-Before making POST requests, ensure that the JSON payload matches the structure provided in these examples.
-
-
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- Python 3.8 or higher.
-
-## Setting up Recommender System API
-
-To set up the Recommender System API, follow these steps:
-
-1. Clone the repository:
-
-    ```
-    git clone https://github.com/<your username>/recommender-system-api.git
-    ```
-
-2. Navigate to the cloned directory:
-
-    ```
-    cd recommender-system-api
-    ```
-
-3. Create a virtual environment (Optional but recommended):
-
-    ```
-    python3 -m venv env
-    source env/bin/activate
-    ```
-
-4. Install the required packages:
-
-    ```
-    pip install -r requirements.txt
-    ```
-
-## Running the API
-
-After setting up the project, you can run the API locally with:
+## Project structure
 
 ```
-uvicorn app:app --reload
+.
+├── app/
+│   ├── main.py              # App factory and router registration
+│   ├── config.py            # All settings, loaded from env vars with defaults
+│   ├── database.py          # SQLAlchemy engine, session, Base
+│   ├── models/              # ORM models (Item, UserRating, Event)
+│   ├── schemas/             # Pydantic request/response schemas
+│   ├── repositories/        # Data-access layer (SQL queries)
+│   ├── services/            # Business logic
+│   └── routers/             # HTTP controllers (items, users, events, recommendations, admin)
+├── recommenders/
+│   ├── collaborative.py     # KNN collaborative filtering
+│   ├── content_based.py     # TF-IDF content-based filtering
+│   └── hybrid.py            # Weighted hybrid
+├── data/
+│   ├── db0.db               # SQLite database (git-ignored)
+│   ├── items.json           # Sample item payload
+│   ├── users.json           # Sample ratings payload
+│   └── items/               # Domain-specific item catalogues (food, movies, marketplace)
+├── docs/
+│   ├── api.png              # API screenshot
+│   ├── Experimento.md       # Experiment notes
+│   └── recsys.postman_collection.json
+├── .env.example             # All available environment variables with defaults
+├── Dockerfile
+├── requirements.txt
+└── run.py                   # Entry point
 ```
 
-### Running with Docker
+## Setup
 
-Alternatively, you can run the application inside a Docker container. Follow these steps to build and run the Docker container:
+**Requirements:** Python 3.10+
 
-1. Build the Docker image:
+```bash
+git clone https://github.com/<your-username>/recommender-system-api.git
+cd recommender-system-api
 
-    ```
-    docker build -t recommender-system-api .
-    ```
+python3 -m venv .venv
+source .venv/bin/activate
 
-2. Run the Docker container:
-
-    ```
-    docker run -p 8000:8000 recommender-system-api
-    ```
-
-By default, the API will be accessible at `http://localhost:8000/`.
-
-## API Documentation
-
-After running the server, you can view the API documentation in your web browser at `http://localhost:8000/docs`
-
-Sure, here is the updated version of your API endpoints with the POST endpoints for items and users.
-
-## API Endpoints
-
-Here are some of the key API endpoints:
-- `/docs` (GET): Returns the OpenAPI documentation for the application's endpoints.
-- `/items` (GET): Retrieve all items from the database.
-- `/users` (GET): Retrieve all users from the database.
-- `/user` (GET): Retrieve a specific user's data from the database.
-
-- `/item` (DELETE): Delete a specific item from the database.
-- `/user` (DELETE): Delete a specific user from the database.
-- `/clear_db` (DELETE): Delete all data from the database.
-
-- `/item/{item_id}` (PUT): Update a specific item in the database.
-- `/user/{user_id}` (PUT): Update a specific user's data in the database.
-- `/system/` (GET): Get system information.
-
-- `/item` (POST): Add new items to the database.
-- `/user` (POST): Add a new user to the database.
-
-Example of usage for POST requests:
-For `/item`:
-```json
-{
-  "items": [
-    {
-      "itemId": "123",
-      "title": "Example title",
-      "description": "Example description",
-      "tag": ["tag1", "tag2"]
-    }
-  ]
-}
-```
-For `/user`:
-```json
-{
-  "items": [
-    {
-      "userId": "123",
-      "itemId": "123",
-      "rating": 5,
-      "timestamp": "2023-06-13 13:45:30"
-    }
-  ]
-}
-```
-Remember to replace the example content with your own data.
-
-The API also includes a `/docs` endpoint that provides a user-friendly interface for exploring and testing the API's endpoints. This is an automatically generated API documentation that describes all the endpoints, their methods, parameters, and responses.
-
-The `/docs` endpoint is accessible by simply appending `/docs` to the API's base URL (e.g., `http://localhost:8000/docs` if the API is running locally on port 8000). This endpoint uses the OpenAPI (formerly Swagger) specifications to generate a comprehensive documentation for the API.
-
-I have also included a postman collection that should make testing easier through the file recsys.postman_collection.json.
-
-## Collaborative Filtering and Content-Based Filtering
-
-In this project, we use two types of recommendation systems - Collaborative Filtering and Content-Based Filtering. Here is how they work and how you can use the codes provided:
-
-### Collaborative Filtering
-
-This recommendation system is based on users' past behavior. We use a method known as Nearest Neighbors, which operates under the assumption that if two items A and B are liked by a significant number of users, then they are similar and this forms the basis for recommending them.
-
-To use this script, you can call the `start(nrec,sel_item)` function where `nrec` is the number of recommendations you want and `sel_item` is the item based on which you want the recommendations.
-
-The script will fetch item and user data from a SQLite database, build a user-item matrix, and use a k-nearest neighbors (k-NN) model to find similar items based on cosine similarity.
-
-This function will return a JSON response that contains the total execution time, the time taken for data processing and recommendation generation, and a list of recommended items.
-
-### Content-Based Filtering
-
-This recommendation system is based on the description and attributes of the items. In this case, we transform the item descriptions and tags into a matrix of TF-IDF features. Then, we compute the similarity of these items based on their feature vectors.
-
-To use this script, you can call the `start(dbn, itid, nitems)` function where `dbn` is the database number, `itid` is the item id for which you want recommendations, and `nitems` is the number of recommendations you want.
-
-This function will return a list of recommended items along with the time taken for data processing, recommendation generation, and the total execution time.
-
-Please ensure that you have the necessary libraries installed and the required data in a SQLite database for these scripts to work properly.
-
-**Note:**
-
-1. Both systems are built with scalability in mind, but keep in mind that recommendation systems are resource-intensive and could be slow depending on the size of your dataset and the hardware you are running these scripts on.
-
-2. The output of the recommendation systems might vary depending on the user behavior and item attributes.
-
-3. The quality of recommendations depends on the quality and quantity of data. More data generally leads to better recommendations.
-
-4. The current implementations use basic versions of Collaborative Filtering and Content-Based Filtering. There are more advanced techniques and improvements that can be incorporated to improve the recommendations.
-
-# Recsys API Guide
-
-This guide provides instructions on how to interact with the Recsys API.
-
-## Clear the Database
-
-Use the following `DELETE` request to clear the database.
-
-```sh
-curl -X DELETE http://localhost:8000/clear_db
+pip install -r requirements.txt
 ```
 
-## Add Items
+## Running
 
-Items can be added to the database with a `POST` request as shown below:
+```bash
+# directly
+uvicorn app.main:app --reload
 
-```sh
-curl -X POST http://localhost:8000/item -d @items.json -H "Content-Type: application/json"
+# or via the entry point
+python run.py
 ```
 
-The `items.json` file should have the following structure:
+### Docker
 
-```json
-{
-    "items": [
-        {
-            "itemId": "1",
-            "title": "Statue of Liberty",
-            "description": "A colossal neoclassical sculpture on Liberty Island in New York Harbor",
-            "tag": ["USA", "New York", "Monument"]
-        },
-        ...
-    ]
-}
+```bash
+docker build -t recsys-api .
+docker run -p 8000:8000 recsys-api
 ```
 
-## Fetch Items
+The API and its interactive docs are available at `http://localhost:8000/docs`.
 
-To fetch items from the database, use the following `GET` request:
+## Configuration
 
-```sh
-curl -X GET http://localhost:8000/items
+All tunable parameters are read from environment variables. Copy `.env.example` to `.env` and adjust as needed — every variable has a default so the app works out of the box without a `.env` file.
+
+```bash
+cp .env.example .env
 ```
 
-## Add Users
+| Variable | Default | Description |
+|---|---|---|
+| `DATABASE_URL` | `sqlite:///./data/db0.db` | DB connection string |
+| `APP_HOST` | `0.0.0.0` | Server host |
+| `APP_PORT` | `8000` | Server port |
+| `APP_RELOAD` | `false` | Enable auto-reload (dev only) |
+| `HYBRID_THRESHOLD` | `5` | Min ratings to prefer collaborative over hybrid |
+| `HYBRID_ALPHA` | `0.5` | Collaborative weight in the hybrid score |
+| `HYBRID_POOL_MULTIPLIER` | `3` | Candidate pool = nrec × multiplier |
+| `FUZZY_MATCH_THRESHOLD` | `60` | Min fuzz ratio (0–100) for title matching |
+| `COLLAB_POPULARITY_THRESHOLD` | `1` | Min ratings an item needs to enter the matrix |
+| `COLLAB_ACTIVITY_THRESHOLD` | `1` | Min ratings a user needs to enter the matrix |
+| `COLLAB_MAX_RATINGS` | `2000000` | Memory cap on ratings loaded |
+| `COLLAB_N_NEIGHBORS` | `20` | k for the KNN model |
+| `CONTENT_NGRAM_MAX` | `3` | Upper bound of TF-IDF n-gram range |
+| `CONTENT_MIN_DF` | `1` | Min document frequency for TF-IDF terms |
 
-Users can be added to the database with a `POST` request:
+## API endpoints
 
-```sh
-curl -X POST http://localhost:8000/user -d @users.json -H "Content-Type: application/json"
+### Items
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/items` | List all items |
+| `POST` | `/items` | Add items (batch) |
+| `GET` | `/items/{item_id}` | Get a single item |
+| `PUT` | `/items/{item_id}` | Update an item |
+| `DELETE` | `/items/{item_id}` | Delete an item |
+
+### Users (ratings)
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/users` | List all ratings |
+| `POST` | `/users` | Add ratings (batch) |
+| `GET` | `/users/{user_id}` | Get ratings for a user |
+| `PUT` | `/users/{user_id}` | Update ratings for a user |
+| `DELETE` | `/users/{user_id}` | Delete all ratings for a user |
+
+### Events (implicit feedback)
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/events` | List events (filter by `?user_id=` or `?item_id=`) |
+| `POST` | `/events` | Record an event |
+
+### Recommendations
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `GET` | `/recommendations/collaborative` | KNN collaborative filtering |
+| `GET` | `/recommendations/content-based` | TF-IDF content-based filtering |
+| `GET` | `/recommendations/hybrid` | Weighted hybrid (param: `alpha`) |
+| `GET` | `/recommendations/auto` | Self-configuring |
+
+### Admin
+
+| Method | Endpoint | Description |
+|---|---|---|
+| `DELETE` | `/admin/database` | Wipe all tables |
+| `GET` | `/admin/system` | Server resource usage |
+
+## Typical workflow
+
+**1. Load the catalogue**
+```bash
+curl -X POST http://localhost:8000/items \
+  -H "Content-Type: application/json" \
+  -d @data/items.json
 ```
 
-The `users.json` file should have the following structure:
-
-```json
-{
-    "items": [
-        {
-            "userId": 1,
-            "itemId": 1,
-            "rating": 3.5,
-            "timestamp": 1112486027
-        },
-        ...
-    ]
-}
+**2. Load ratings**
+```bash
+curl -X POST http://localhost:8000/users \
+  -H "Content-Type: application/json" \
+  -d @data/users.json
 ```
 
-## Fetch Users
+**3. Get recommendations**
+```bash
+# Let the system choose the algorithm automatically
+curl "http://localhost:8000/recommendations/auto?sel_item=Eiffel+Tower&nrec=5"
 
-To fetch users from the database, use the following `GET` request:
-
-```sh
-curl -X GET http://localhost:8000/users
+# Or pick an algorithm explicitly
+curl "http://localhost:8000/recommendations/collaborative?sel_item=Eiffel+Tower&nrec=5"
+curl "http://localhost:8000/recommendations/content-based?item_index=1&n=5"
+curl "http://localhost:8000/recommendations/hybrid?sel_item=Eiffel+Tower&nrec=5&alpha=0.6"
 ```
 
-## Make Recommendations
+The `sel_item` parameter uses fuzzy matching, so partial or approximate titles are accepted.
 
-You can make recommendations using either Collaborative Filtering or Content-based Filtering.
+## Experiment questions
 
-### Collaborative Filtering
-
-To get recommendations using Collaborative Filtering for a specific user, send a `GET` request to `/user/recommendations` with optional parameters `nrec` for number of recommendations and `sel_item` for a specific item.
-
-```sh
-curl -X GET "http://localhost:8000/user/recommendations?nrec=5&sel_item=Item1"
-```
-
-### Content-Based Filtering
-
-To get recommendations using Content-based Filtering for a specific item, send a `GET` request to `/item/neighbors` with optional parameters `itemno` for item number and `nitems` for number of items.
-
-```sh
-curl -X GET "http://localhost:8000/item/neighbors?itemno=1&nitems=5"
-```
-
-Please replace `nrec`, `sel_item`, `itemno` and `nitems` as needed.
-
-
-## Experiment Questions
-
-As part of my master's degree project, I would greatly appreciate your feedback on the Recommender System API. Your input will help me evaluate the effectiveness of the system and identify areas for improvement. Please take a moment to answer the following questions:
+As part of a master's degree research project, feedback on the API is greatly appreciated. Please take a moment to answer the following questions:
 
 1. How would you rate the overall performance and responsiveness of the API?
 2. Were you able to successfully set up and run the API using the provided instructions?
 3. Did you encounter any difficulties or issues while interacting with the API or running the scripts?
 4. Did you find the API documentation and the provided examples clear and helpful?
-5. Were you able to understand and utilize the Collaborative Filtering and Content-Based Filtering recommendation systems effectively?
+5. Were you able to understand and utilize the recommendation systems effectively?
 6. Did the recommendations generated by the system align with your expectations? Were they useful and relevant?
 7. Were there any specific features or functionalities that you felt were missing from the API?
 8. Do you have any suggestions for improving the API or the recommendation systems?
-9. How does the Recommender System API compare to other recommender system APIs you may have used in the past? Please provide your insights and comparisons regarding the features, usability, performance, and any other aspects you consider relevant when comparing the Recommender System API to other similar APIs you have worked with.
+9. How does this API compare to other recommender system APIs you may have used in the past? Please share insights on features, usability, performance, or any other relevant aspects.
 
-Your feedback is invaluable to me, and I appreciate you taking the time to help me with my project. If you have any additional comments or insights, please feel free to share them. Thank you!
-
-<!--
-# Project TODOs
-
-Here is a list of potential improvements and future directions for the project.
-
-- [ ] **Security Integration:** Implement JWT (JSON Web Tokens) for secure transmission of information as a JSON object. This could be used to verify and authenticate requests and manage user sessions.
-
-- [ ] **Database Upgrade:** Replace the current SQLite-based setup with a more robust and scalable database system. Options could include PostgreSQL for relational data or NoSQL alternatives like MongoDB for more flexible data structures.
-
-- [ ] **Hardware Acceleration:** Add support for hardware acceleration (e.g., GPUs, TPUs) to speed up computation of recommendations. This could be achieved through integration with libraries like TensorFlow, PyTorch, or Rapids.
-
-- [ ] **Library Migration (Pandas to Polars):** Migrate from the Pandas library to the newer and more performant Polars library for data manipulation and analysis. This should improve the speed and memory efficiency of data processing operations.
-
-Each of these improvements would contribute significantly to the scalability, performance, and functionality of the project. However, they also each present their own unique challenges and complexities, and should be carefully planned and implemented.
-
+Your feedback is invaluable. If you have any additional comments, please feel free to share them. Thank you!
 
 ## License
 
-This project uses the following license: GPL3 License.
-
-## Disclaimer
-
-This project is currently in the development stage and might be subject to changes.
-``
--->
+MIT

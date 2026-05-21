@@ -79,6 +79,46 @@ class Settings:
         default_factory=lambda: _int("FUZZY_MATCH_THRESHOLD", 60)
     )
 
+    # ── Hardware acceleration ────────────────────────────────────────────────
+    # none (default) | intel (scikit-learn-intelex) | cuda (cuML + CuPy)
+    hardware_backend: str = field(
+        default_factory=lambda: _str("HARDWARE_BACKEND", "none")
+    )
+
+    # ── Security ─────────────────────────────────────────────────────────────
+    # Set DISABLE_SECURITY=true for local sandbox testing only.
+    disable_security: bool = field(
+        default_factory=lambda: _bool("DISABLE_SECURITY", False)
+    )
+    # Random secret used to sign JWTs — MUST be overridden in production.
+    secret_key: str = field(
+        default_factory=lambda: _str("SECRET_KEY", "CHANGE_THIS_IN_PRODUCTION")
+    )
+    jwt_algorithm: str = field(
+        default_factory=lambda: _str("JWT_ALGORITHM", "HS256")
+    )
+    access_token_expire_minutes: int = field(
+        default_factory=lambda: _int("ACCESS_TOKEN_EXPIRE_MINUTES", 30)
+    )
+    # Comma-separated list of allowed CORS origins. Use * to allow all.
+    cors_origins: str = field(
+        default_factory=lambda: _str("CORS_ORIGINS", "*")
+    )
+    # Sliding-window rate limit: max requests per IP per period (seconds).
+    rate_limit_calls: int = field(
+        default_factory=lambda: _int("RATE_LIMIT_CALLS", 100)
+    )
+    rate_limit_period: int = field(
+        default_factory=lambda: _int("RATE_LIMIT_PERIOD", 60)
+    )
+    # Default admin account seeded on first start.
+    first_superuser: str = field(
+        default_factory=lambda: _str("FIRST_SUPERUSER", "admin")
+    )
+    first_superuser_password: str = field(
+        default_factory=lambda: _str("FIRST_SUPERUSER_PASSWORD", "changeme")
+    )
+
     # ── App metadata (not env-configurable) ──────────────────────────────────
     app_title: str = "Recommender System API"
     app_version: str = "1.0.0"
