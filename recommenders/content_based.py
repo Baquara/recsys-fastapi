@@ -6,6 +6,8 @@ Algorithm:
   2. Build a TF-IDF matrix over concatenated `description` + `tag` text.
   3. Compute pairwise cosine similarities.
   4. Return the top-n most similar items to the query item (by row index).
+
+Tunable via environment variables — see app/config.py.
 """
 
 import logging
@@ -18,11 +20,18 @@ from sklearn.metrics.pairwise import linear_kernel
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
+from app.config import settings
+
 logger = logging.getLogger(__name__)
 
 
 def _build_similarity_index(df: pd.DataFrame) -> Dict[Any, List]:
-    tf = TfidfVectorizer(analyzer="word", ngram_range=(1, 3), min_df=1, stop_words="english")
+    tf = TfidfVectorizer(
+        analyzer="word",
+        ngram_range=(1, settings.content_ngram_max),
+        min_df=settings.content_min_df,
+        stop_words="english",
+    )
     tfidf_matrix = tf.fit_transform(df["description"] + " | " + df["tag"])
     cosine_sim = linear_kernel(tfidf_matrix, tfidf_matrix)
 

@@ -59,16 +59,50 @@ def content_based_recommendations(
 
 
 @router.get(
-    "/auto",
-    summary="Auto-select recommendation algorithm",
+    "/hybrid",
+    summary="Hybrid recommendations",
     description=(
-        "Infers the best recommendation algorithm based on available data for the requested item.\n\n"
-        "**Decision logic:**\n"
-        "- Item has ratings in the database → **Collaborative Filtering** (KNN cosine)\n"
-        "- Item has no ratings (cold-start) → **Content-Based** (TF-IDF cosine)\n\n"
-        "The response always includes a `method` field indicating which algorithm was used."
+        "Combines **collaborative filtering** and **content-based** scores into a single ranking.\n\n"
+        "**How it works:**\n"
+        "1. Pulls a candidate pool from both algorithms (over-fetched 3×).\n"
+        "2. Normalises both scores to a similarity in `[0, 1]`.\n"
+        "3. Combines with a weighted average: `hybrid = α × collaborative + (1 − α) × content_based`.\n"
+        "4. Returns the top-N items sorted by the combined score.\n\n"
+        "**When to use:** sparse rating data, or when you want a smoother, more robust ranking "
+        "than either method on its own.\n\n"
+        "Each result exposes its individual `collaborative_score` and `content_score` for transparency."
     ),
-    response_description="Recommendations + `method` field indicating the algorithm chosen",
+    response_description="Recommendations with `hybrid_score`, `collaborative_score`, and `content_score`",
+)
+def hybrid_recommendations(
+    sel_item: str = Query(..., description="Title of the seed item — fuzzy matched against the catalogue"),
+    nrec: int = Query(5, ge=1, le=50, description="Number of recommendations to return"),
+    alpha: float = Query(0.5, ge=0.0, le=1.0, description="Weight for the collaborative signal (1 − α weights content-based)"),
+):
+    try:
+        return recommendation_service.get_hybrid(engine, sel_item, nrec, alpha)
+    except ValueError as exc:
+        raise HTTPException(status_code=404, detail=str(exc))
+
+
+@router.get(
+    "/auto",
+    summary="Self-configuring recommendation",
+    description=(
+        "**Self-configuring** endpoint: the system inspects the data available for the requested "
+        "item and infers the most appropriate algorithm — the caller does **not** specify the method.\n\n"
+        "**Decision tree (based on number of ratings for the seed item):**\n\n"
+        "| Ratings | Method chosen | Why |\n"
+        "|---|---|---|\n"
+        "| `0` | `content_based` | Cold-start — no behavioural signal yet |\n"
+        "| `1` to `4` | `hybrid` | Sparse signal — combine collaborative + content-based |\n"
+        "| `5` or more | `collaborative` | Sufficient rating history for KNN |\n\n"
+        "The response always includes:\n"
+        "- `method` — the algorithm actually used\n"
+        "- `reason` — human-readable explanation of the decision\n"
+        "- `ratings_count` — how many ratings the seed item had at decision time"
+    ),
+    response_description="Recommendations + `method`, `reason`, and `ratings_count` metadata",
 )
 def auto_recommendations(
     sel_item: str = Query(..., description="Title of the seed item — fuzzy matched against the catalogue"),

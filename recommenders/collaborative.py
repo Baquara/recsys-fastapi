@@ -5,8 +5,10 @@ Algorithm:
   1. Load ratings and items from the DB.
   2. Build a sparse item–user matrix (items as rows, users as columns).
   3. Fit a KNN model with cosine distance.
-  4. Fuzzy-match the query title against known item titles (≥ 60 % ratio).
+  4. Fuzzy-match the query title against known item titles.
   5. Return the n nearest neighbours with their metadata and cosine distances.
+
+Tunable via environment variables — see app/config.py.
 """
 
 import logging
@@ -20,11 +22,9 @@ from sklearn.neighbors import NearestNeighbors
 from sqlalchemy import text
 from sqlalchemy.engine import Engine
 
-logger = logging.getLogger(__name__)
+from app.config import settings
 
-_POPULARITY_THRESHOLD = 1   # minimum ratings an item must have
-_ACTIVITY_THRESHOLD = 1     # minimum ratings a user must have given
-_MAX_RATINGS = 2_000_000    # cap to avoid memory issues on huge datasets
+logger = logging.getLogger(__name__)
 
 
 def _fuzzy_match(title_to_idx: Dict[str, int], query: str) -> int:
@@ -33,12 +33,15 @@ def _fuzzy_match(title_to_idx: Dict[str, int], query: str) -> int:
         for title, idx in title_to_idx.items()
     ]
     matches = sorted(
-        [(t, i, r) for t, i, r in matches if r >= 60],
+        [(t, i, r) for t, i, r in matches if r >= settings.fuzzy_match_threshold],
         key=lambda x: x[2],
         reverse=True,
     )
     if not matches:
-        raise ValueError(f"No item found matching '{query}' (fuzzy threshold: 60 %)")
+        raise ValueError(
+            f"No item found matching '{query}' "
+            f"(fuzzy threshold: {settings.fuzzy_match_threshold} %)"
+        )
     logger.info("Fuzzy match for '%s': %s", query, [m[0] for m in matches[:3]])
     return matches[0][1]
 
@@ -50,25 +53,25 @@ def recommend(engine: Engine, sel_item: str, n_recommendations: int) -> Dict[str
         df_items = pd.read_sql_query(text("SELECT * FROM items"), conn)
         df_ratings = pd.read_sql_query(text("SELECT * FROM users"), conn)
 
-    df_ratings = df_ratings.head(_MAX_RATINGS)
+    df_ratings = df_ratings.head(settings.collab_max_ratings)
 
-    # Filter by popularity and user activity
+    # Filter by item popularity
     popular_items = set(
         df_ratings.groupby("itemId").size()
-        .loc[lambda s: s >= _POPULARITY_THRESHOLD].index
+        .loc[lambda s: s >= settings.collab_popularity_threshold].index
     )
     df_ratings = df_ratings[df_ratings.itemId.isin(popular_items)]
 
+    # Filter by user activity
     active_users = set(
         df_ratings.groupby("userId").size()
-        .loc[lambda s: s >= _ACTIVITY_THRESHOLD].index
+        .loc[lambda s: s >= settings.collab_activity_threshold].index
     )
     df_ratings = df_ratings[df_ratings.userId.isin(active_users)]
 
     t_data = time.perf_counter() - t_start
     t_rec_start = time.perf_counter()
 
-    # Build sparse item–user matrix
     item_user_mat = df_ratings.pivot(index="itemId", columns="userId", values="rating").fillna(0)
     df_items_indexed = df_items.set_index("itemId")
     valid_mask = df_items_indexed.index.isin(item_user_mat.index)
@@ -78,11 +81,18 @@ def recommend(engine: Engine, sel_item: str, n_recommendations: int) -> Dict[str
     }
     mat_sparse = csr_matrix(item_user_mat.values)
 
-    model = NearestNeighbors(metric="cosine", algorithm="brute", n_neighbors=20, n_jobs=-1)
+    model = NearestNeighbors(
+        metric="cosine",
+        algorithm="brute",
+        n_neighbors=settings.collab_n_neighbors,
+        n_jobs=-1,
+    )
     model.fit(mat_sparse)
 
     query_idx = _fuzzy_match(title_to_idx, sel_item)
-    distances, indices = model.kneighbors(mat_sparse[query_idx], n_neighbors=n_recommendations + 1)
+    distances, indices = model.kneighbors(
+        mat_sparse[query_idx], n_neighbors=n_recommendations + 1
+    )
 
     raw = sorted(
         zip(indices.squeeze().tolist(), distances.squeeze().tolist()),
